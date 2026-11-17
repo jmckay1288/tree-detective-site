@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cline x1='39' y1='39' x2='57' y2='57' stroke='%23b5502a' stroke-width='9' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='26' r='19' fill='%23f4eee1' stroke='%23262019' stroke-width='5'/%3E%3Cpath d='M26 23v4M18 27h16M18 27v3M34 27v3' stroke='%235c6636' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='26' cy='18' r='4.5' fill='%23b5502a'/%3E%3Ccircle cx='18' cy='34' r='4' fill='%235c6636'/%3E%3Ccircle cx='34' cy='34' r='4' fill='%23a07d2c'/%3E%3C/svg%3E" />
+    <title>What Is a GEDCOM File? How to Export Yours | Genealogy Detective Service</title>
+    <meta name="description" content="What is a GEDCOM file? The plain answer, what it holds, and how to export a GEDCOM file from Ancestry, FamilySearch, and MyHeritage, step by step." />
+    <link rel="canonical" href="https://tree-detective.com/guides/what-is-a-gedcom-file.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What Is a GEDCOM File? How to Export Yours | Genealogy Detective Service" />
+    <meta property="og:description" content="What is a GEDCOM file? The plain answer, what it holds, and how to export a GEDCOM file from Ancestry, FamilySearch, and MyHeritage, step by step." />
+    <meta property="og:url" content="https://tree-detective.com/guides/what-is-a-gedcom-file.html" />
+    <meta property="og:image" content="https://tree-detective.com/og-image.jpg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "What Is a GEDCOM File? How to Export Yours",
+        "description": "What is a GEDCOM file? The plain answer, what it holds, and how to export a GEDCOM file from Ancestry, FamilySearch, and MyHeritage, step by step.",
+        "author": { "@type": "Organization", "name": "Genealogy Detective Service", "url": "https://tree-detective.com/" },
+        "publisher": { "@type": "Organization", "name": "Genealogy Detective Service", "url": "https://tree-detective.com/" },
+        "mainEntityOfPage": "https://tree-detective.com/guides/what-is-a-gedcom-file.html"
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;0,6..72,900;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --paper: #f4eee1; --paper-deep: #ece3cf; --card: #fdfaf2; --ink: #262019;
+        --ink-soft: #4c4436; --ink-faint: #6f6450; --line: #d8cbb0;
+        --rust: #b5502a; --rust-deep: #96401f; --olive: #5c6636; --gold: #a07d2c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 17.5px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 44rem; margin: 0 auto; padding: 0 20px; }
+      .site-header { border-bottom: 2px solid var(--ink); padding: 16px 0; }
+      .brand {
+        font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 22px;
+        color: var(--ink); text-decoration: none; line-height: 1.1;
+      }
+      .brand small {
+        display: block; font-family: "Public Sans", sans-serif; font-weight: 600;
+        font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ink-faint); margin-top: 3px;
+      }
+      article { padding: 42px 0 4px; }
+      h1 {
+        font-family: "Newsreader", Georgia, serif; font-weight: 900;
+        font-size: clamp(32px, 5vw, 44px); line-height: 1.08; margin: 0 0 18px;
+      }
+      h2 {
+        font-family: "Newsreader", Georgia, serif; font-weight: 700;
+        font-size: 26px; line-height: 1.2; margin: 36px 0 10px;
+      }
+      p { margin: 0 0 16px; color: var(--ink-soft); }
+      p strong, li strong { color: var(--ink); }
+      .lede { font-size: 19.5px; }
+      a { color: var(--rust-deep); }
+      ul, ol { margin: 0 0 16px; padding-left: 24px; color: var(--ink-soft); }
+      li { margin-bottom: 8px; }
+      .cta {
+        background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--rust);
+        padding: 24px 26px; margin: 38px 0 8px; box-shadow: 0 14px 30px rgba(38, 32, 25, 0.10);
+      }
+      .cta h2 { margin-top: 0; font-size: 24px; }
+      .cta p:last-child { margin-bottom: 0; }
+      .cta .btn {
+        display: inline-block; background: var(--rust); color: #fff; text-decoration: none;
+        font-weight: 700; padding: 12px 22px; border-radius: 6px; margin: 4px 10px 8px 0;
+      }
+      .cta .btn:hover { background: var(--rust-deep); }
+      footer { border-top: 1px solid var(--line); margin-top: 46px; padding: 22px 0 36px; color: var(--ink-faint); font-size: 15px; }
+      footer a { color: var(--ink-soft); }
+      footer p { color: var(--ink-faint); margin: 0 0 8px; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="https://tree-detective.com/">Genealogy Detective Service<small>Family Tree Research Services</small></a>
+      </div>
+    </header>
+    <main class="wrap">
+      <article>
+        <h1>What Is a GEDCOM File?</h1>
+        <p class="lede">If you have spent any time on genealogy sites, you have seen the word GEDCOM — usually at the exact moment you try to move your family tree from one place to another. So what is a GEDCOM file? Simply put, it is the standard format a family tree is stored in when it travels. Once you know what it is and how to make one, your tree is never trapped inside a single website again.</p>
+
+        <h2>The plain answer</h2>
+        <p>GEDCOM — short for <strong>Genealogical Data Communication</strong> — is a plain-text file format created decades ago so that family tree software could exchange data. Every major genealogy site and program can read and write it. Open one in a text editor and you can actually read it: lines of tags and values describing each person, their birth, marriage, and death, and how they connect to parents, spouses, and children. It is not fancy, and that is the point. It is the one format everything understands.</p>
+
+        <h2>What a GEDCOM file holds — and what it doesn't</h2>
+        <p>A GEDCOM holds people and relationships: names, dates, places, notes, and — when the tree is well kept — the sources behind each fact. What usually does <em>not</em> travel is the media. Photographs, scanned documents, and record images attached to people on a website often stay behind, or arrive as broken links. Think of a GEDCOM as the skeleton and the paper trail of your tree, not the photo album. That also makes it small: most trees fit in a file you could send by email.</p>
+
+        <h2>Why you would want one</h2>
+        <p>Three reasons. <strong>Backup:</strong> websites change their terms, raise prices, and occasionally shut down; a GEDCOM on your own computer is your tree in your hands. <strong>Moving:</strong> it is how you take a tree from one site or program to another without retyping it. <strong>Sharing with a researcher:</strong> when you hire help — an error check, a record search, a tree built further out — the GEDCOM is how the researcher sees exactly what you have, sources and all, instead of starting from a spoken summary.</p>
+
+        <h2>How to export a GEDCOM from Ancestry</h2>
+        <p>Open your tree and go to <strong>Tree Settings</strong>. Look for the <strong>Export tree</strong> button, usually on the right side of the settings page. Ancestry prepares the file and gives you a download link; save the .ged file somewhere you will find it again. One caution: Ancestry exports do not include the record images attached to your tree — the facts and sources travel, the pictures stay.</p>
+
+        <h2>How to export from FamilySearch</h2>
+        <p>FamilySearch works differently: its tree is one shared tree that everyone edits together, and FamilySearch itself does not offer a one-click download of your line as a GEDCOM file. The usual route is a partner program that connects to FamilySearch — desktop software such as RootsMagic can pull your line down from FamilySearch into a file on your own computer, and from there export a standard GEDCOM. If you only need your direct line, that download is quick.</p>
+
+        <h2>How to export from MyHeritage</h2>
+        <p>On your family site, open the <strong>Family Tree</strong> menu, choose <strong>Manage Trees</strong>, and use the <strong>Export to GEDCOM</strong> option for the tree you want. MyHeritage generates the file and emails you a download link. You may be offered a choice about including photos; as noted above, photos travel imperfectly at best, so don't count on them arriving intact.</p>
+
+        <h2>What to do with the file once you have it</h2>
+        <p>Keep the original somewhere safe, and make a copy for sending. Then you can put that copy to work right away: our <a href="https://tree-detective.com/#members">free sample scan</a> reads a GEDCOM and reports your tree's problem counts in seconds. And when you are ready for real research — building the tree out, checking it thoroughly, or pushing lines further back — the <a href="https://tree-detective.com/#tiers">Research Tiers</a> work from your GEDCOM too. Everything we deliver comes back as a written report with findings labeled Verified, Supported, Inference, or Conflict, plus a downloadable GEDCOM file — so the work is yours to keep and import anywhere.</p>
+
+        <div class="cta">
+          <h2>Put your GEDCOM to work</h2>
+          <p><strong>Start free.</strong> Create a free account, upload your GEDCOM, and get a free sample scan: instant counts of impossible dates, possible duplicates, missing details, and unsourced people in your tree.</p>
+          <p>Ready for more? The <strong>Research Tiers</strong> build from your file — Starter $25 (up to 50 ancestors), Standard $49 (up to 100), Deep Dive $89 (up to 300) — and every job returns a labeled written report plus a downloadable GEDCOM file. Returning customers get 20% off every order after their first.</p>
+          <p><a class="btn" href="https://tree-detective.com/#tiers">See the Research Tiers</a></p>
+          <p>Order by card at <a href="https://tree-detective.com/">tree-detective.com</a> or by email to <a href="mailto:admin@tree-detective.com">admin@tree-detective.com</a>.</p>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="wrap">
+        <p><a href="https://tree-detective.com/">Genealogy Detective Service</a> — family tree research, honestly labeled.</p>
+        <p><a href="https://tree-detective.com/">Home</a> · <a href="https://tree-detective.com/#privacy">Privacy &amp; Legal</a> · <a href="mailto:admin@tree-detective.com">admin@tree-detective.com</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
