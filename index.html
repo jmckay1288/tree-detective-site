@@ -409,6 +409,44 @@
       .promise .stamps { flex: none; }
       .promise .stamp { background: var(--paper); }
 
+      /* ---------- Free guides ---------- */
+      .guides { padding: 8px 0 60px; }
+      .guides h2 { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: clamp(28px, 3.8vw, 38px); margin: 0 0 10px; }
+      .guides .lede { font-size: 17.5px; color: var(--ink-soft); max-width: 42em; margin: 0 0 28px; }
+      .guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
+      .guide-item { padding: 18px 0; border-bottom: 1px solid var(--line); }
+      .guide-item h3 { font-size: 18px; margin: 0 0 6px; line-height: 1.35; }
+      .guide-item h3 a { color: var(--ink); text-decoration: none; }
+      .guide-item h3 a:hover { color: var(--rust-deep); text-decoration: underline; text-underline-offset: 3px; }
+      .guide-item p { margin: 0; font-size: 15.5px; color: var(--ink-soft); }
+
+      /* ---------- Sample reports ---------- */
+      .samples { padding: 8px 0 60px; }
+      .samples h2 { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: clamp(28px, 3.8vw, 38px); margin: 0 0 10px; }
+      .samples .lede { font-size: 17.5px; color: var(--ink-soft); max-width: 42em; margin: 0 0 28px; }
+      .sample-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+      .sample-card {
+        background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+        padding: 24px clamp(20px, 3vw, 28px) 26px;
+      }
+      .sample-card h3 {
+        font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 22px;
+        line-height: 1.2; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--line);
+      }
+      .sample-scan-title { font-weight: 700; font-size: 16.5px; margin: 0 0 8px; color: var(--ink); }
+      ul.sample-scan { list-style: none; margin: 0 0 18px; padding: 0; }
+      ul.sample-scan li {
+        position: relative; padding: 7px 0 7px 20px; font-size: 15.5px; color: var(--ink-soft);
+        border-bottom: 1px dashed var(--line);
+      }
+      ul.sample-scan li::before { content: ""; position: absolute; left: 2px; top: 15px; width: 7px; height: 7px; background: var(--olive); }
+      .sample-finding { margin: 0 0 14px; font-size: 16px; color: var(--ink-soft); max-width: 52em; }
+      .sample-finding:last-child { margin-bottom: 0; }
+      .sample-closing { margin: 18px 0 0; font-size: 16px; color: var(--ink-soft); max-width: 52em; }
+      .sample-closing strong { color: var(--ink); }
+      .samples-cta { margin: 24px 0 0; font-size: 17.5px; color: var(--ink-soft); max-width: 42em; }
+      .samples-cta a { font-weight: 700; }
+
       /* ---------- FAQ ---------- */
       .faq { padding: 8px 0 60px; }
       .faq h2 { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: clamp(28px, 3.8vw, 38px); margin: 0 0 10px; }
@@ -486,6 +524,7 @@
         .service-cols { grid-template-columns: 1fr; gap: 34px; }
         .tier-grid { grid-template-columns: 1fr; }
         .service-grid { grid-template-columns: 1fr; }
+        .guide-grid { grid-template-columns: 1fr; }
         .auto-grid { grid-template-columns: 1fr; }
         .service-head { flex-direction: column; }
         .cabinet-card { flex: none; width: 200px; }
@@ -507,6 +546,8 @@
           <a href="#error-check">Error Check</a>
           <a href="#tiers">Research Tiers</a>
           <a href="#services">Services</a>
+          <a href="#guides">Guides</a>
+          <a href="#samples">Samples</a>
           <a href="#members">Membership</a>
           <a href="#faq">FAQ</a>
           <a href="#privacy">Privacy &amp; Legal</a>
@@ -870,6 +911,67 @@
               <span class="stamp conflict">Conflict</span>
             </div>
           </div>
+        </div>
+      </section>
+
+            <!-- ============ FREE GUIDES ============ -->
+      <section class="guides" id="guides" aria-labelledby="guides-heading">
+        <div class="wrap">
+          <h2 id="guides-heading">Free guides</h2>
+          <p class="lede">Plain-English guides from the casebook — read one, then put us to work.</p>
+          <div class="guide-grid">
+            <article class="guide-item">
+              <h3><a href="guides/family-tree-mistakes.html">Family Tree Mistakes: How to Check Your Tree for Errors</a></h3>
+              <p>The mistakes almost everyone makes — impossible dates, merged strangers, copied errors — and how to catch them.</p>
+            </article>
+            <article class="guide-item">
+              <h3><a href="guides/what-is-a-gedcom-file.html">What Is a GEDCOM File? How to Export Yours</a></h3>
+              <p>The plain answer, what the file holds, and how to export yours from Ancestry, FamilySearch, and MyHeritage.</p>
+            </article>
+            <article class="guide-item">
+              <h3><a href="guides/brick-wall-ancestor.html">Brick Wall Ancestor? How to Break Through</a></h3>
+              <p>Why ancestors vanish from the records, and the methods that find them again.</p>
+            </article>
+            <article class="guide-item">
+              <h3><a href="guides/how-to-find-a-death-record.html">How to Find a Death Record for an Ancestor</a></h3>
+              <p>Where death records are kept, which indexes to search first, and what to try when no certificate exists.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SAMPLE REPORTS ============ -->
+      <section class="samples" id="samples" aria-labelledby="samples-heading">
+        <div class="wrap">
+          <h2 id="samples-heading">Sample reports</h2>
+          <p class="lede">Every order delivers a written report — every finding labeled — plus a downloadable tree file. These samples come from a real test run on a 204-person tree; names and places are changed for privacy.</p>
+          <div class="sample-list">
+            <article class="sample-card">
+              <h3>From a Family Tree Error Check</h3>
+              <p class="sample-scan-title">Scan of the submitted tree — 204 people:</p>
+              <ul class="sample-scan">
+                <li>Impossible dates (death before birth, etc.): 0</li>
+                <li>Possible duplicate people: 0</li>
+                <li>People with missing birth details: 21</li>
+                <li>People with missing death details: 74</li>
+                <li>People with no sources attached: 19</li>
+              </ul>
+              <p class="sample-finding">CONFLICT — A death year. The tree said 1912; the state death index (certificate 6106) says 1913. The index governs, and the tree was corrected.</p>
+              <p class="sample-finding">CONFLICT — A marriage date. The civil marriage index says 16 January; a memorial page says 19 January. Both dates are shown and labeled, and the index date is the one used.</p>
+              <p class="sample-closing">Delivered with the check: a corrected, downloadable GEDCOM file plus the full labeled findings list.</p>
+            </article>
+            <article class="sample-card">
+              <h3>From a One-Ancestor Report ($9.99)</h3>
+              <p class="sample-finding">VERIFIED — Parentage. Proven from a sibling’s estate distribution naming him as a brother. An earlier candidate for his father was ruled out by that man’s own estate account, which names all of his children — and he is not among them.</p>
+              <p class="sample-finding">SUPPORTED — Marriages. Three marriages from the civil marriage indexes (1836, 1838, 1848). A later search of church records found none of the three, so the civil indexes remain the only marriage evidence.</p>
+              <p class="sample-finding">VERIFIED — Death and estate. He left no will. His administration bond was filed in November 1851, and the final account names the widow’s one-third share and each son’s share to the cent.</p>
+            </article>
+            <article class="sample-card">
+              <h3>From a Record Lookup ($9.99)</h3>
+              <p class="sample-finding">One lookup can fix a tree. The death record we found named the ancestor’s parents — and the mother it names is not the woman the tree had carried for years. The record, made at his death, is the stronger source, so the tree was corrected and the old name kept, labeled as a conflict, instead of quietly disappearing.</p>
+            </article>
+          </div>
+          <p class="samples-cta">Start with the free sample scan — <a href="#members">join free</a>, upload your tree file, and see your own counts.</p>
         </div>
       </section>
 
