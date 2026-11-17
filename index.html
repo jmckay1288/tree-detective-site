@@ -54,8 +54,7 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lineage Extension" }, "price": "59", "priceCurrency": "USD" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Immigrant Origins Search" }, "price": "59", "priceCurrency": "USD" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lineage Society Help" }, "price": "79", "priceCurrency": "USD" },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family History Book" }, "price": "99", "priceCurrency": "USD" },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Tree Photo Poster" }, "price": "59", "priceCurrency": "USD" }
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family History Book" }, "price": "99", "priceCurrency": "USD" }
           ]
         }
       }
@@ -398,7 +397,7 @@
       .service-item p { margin: 0; font-size: 15px; color: var(--ink-soft); }
       .service-price { flex: none; text-align: right; }
       .service-price .from { display: block; font-family: "Public Sans", sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
-      .service-price .amount { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 26px; line-height: 1.1; }       .poster-sample { margin: 16px 0 6px; max-width: 560px; }       .poster-sample figcaption { margin-top: 10px; font-size: 14px; font-style: italic; color: var(--ink-soft); }
+      .service-price .amount { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 26px; line-height: 1.1; }
       .promise {
         margin-top: 32px; background: var(--card); border: 1px solid var(--line); border-radius: 10px;
         padding: 22px 24px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
@@ -500,7 +499,7 @@
       .fb-rating-option:hover { border-color: var(--rust); }
       .fb-rating-option:has(input:checked) { border-color: var(--rust); background: var(--paper-deep); font-weight: 700; }
       .fb-rating-option:has(input:focus-visible) { outline: 2px solid var(--olive); outline-offset: 1px; }
-      .feedback-form .buy-btn { width: auto; padding-left: 34px; padding-right: 34px; }        /* ---------- Research Information Sheet ---------- */       .ris-form { max-width: 720px; }       .ris-subhead {         font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 21px;         line-height: 1.2; margin: 30px 0 16px; padding-bottom: 8px;         border-bottom: 2px solid var(--line);       }       .ris-subhead:first-child { margin-top: 0; }       .ris-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }       @media (max-width: 640px) {         .ris-grid { grid-template-columns: 1fr; }       }
+      .feedback-form .buy-btn { width: auto; padding-left: 34px; padding-right: 34px; }        /* ---------- Research Information Sheet ---------- */       .ris-form { max-width: 720px; }       .ris-subhead {         font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 21px;         line-height: 1.2; margin: 30px 0 16px; padding-bottom: 8px;         border-bottom: 2px solid var(--line);       }       .ris-subhead:first-child { margin-top: 0; }       .ris-welcome {         border: 1.5px solid var(--olive); border-radius: 10px; background: var(--card);         padding: 16px 20px; margin: 0 0 22px; max-width: 46em;       }       .ris-welcome p { margin: 0; font-size: 16.5px; color: var(--ink-soft); }       .ris-welcome p strong { color: var(--ink); }       .ris-service-hint { margin: -10px 0 4px; font-size: 14.5px; color: var(--ink-faint); }       .ris-group[hidden] { display: none; }       .ris-group-intro { margin: 0 0 18px; font-size: 16px; color: var(--ink-soft); max-width: 42em; }       .ris-attach-note {         border: 1.5px dashed var(--gold); border-radius: 8px; background: var(--card);         padding: 14px 18px; margin: 0 0 22px; font-size: 15.5px; color: var(--ink-soft);       }       .ris-attach-note strong { color: var(--ink); }       .ris-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }       @media (max-width: 640px) {         .ris-grid { grid-template-columns: 1fr; }       }
       .fb-error {
         margin: 0 0 16px; padding: 11px 14px; font-size: 15px; color: var(--ink);
         border: 1.5px solid var(--rust); border-radius: 6px; background: var(--card);
@@ -742,9 +741,7 @@
         <a class="brand" href="#top" aria-label="Genealogy Detective Service — home">
           <img class="brand-logo" src="gds-logo-lens-lockup.png" alt="Genealogy Detective Service" width="2736" height="912" />
         </a>
-        <nav class="site-nav" aria-label="Store sections">
-                    <a href="#start-your-family-tree">Start Your Tree</a>           <a href="#automatic">How It Works</a>           <a href="#services">Services</a>           <a href="#error-check">Error Check</a>           <a href="#tiers">Research Tiers</a>           <a href="#guides">Guides</a>           <a href="#samples">Samples</a>           <a href="#members">Membership</a>           <a href="#faq">FAQ</a>           <a href="#research-info">Info Sheet</a>           <a href="#feedback">Feedback</a>           <a href="#viewer">Tree Viewer</a>           <a href="#privacy">Privacy &amp; Legal</a>
-        </nav>
+                <nav class="site-nav" aria-label="Store sections">           <a href="#start-your-family-tree">Start Your Tree</a>           <a href="#services">Services</a>           <a href="#guides">Guides</a>           <a href="#members">Membership</a>           <a href="#faq">FAQ</a>           <a href="#research-info">Info Sheet</a>           <a href="#viewer">Tree Viewer</a>         </nav>
       </div>
     </header>
 
@@ -972,15 +969,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyHistoryBook">$99</span></div>
             </div>
-            <div class="service-item">
-              <div>
-                <h3>Family Tree Photo Poster</h3>
-                <p>Your family tree as a real printed poster, mailed to your door. Send us your tree file (GEDCOM) and photos of your ancestors, and we lay out your direct line across five generations — up to 31 people — with each photo beside its person; anyone without a photo gets a neat name-and-dates medallion. Before anything prints, we email you a proof to approve, so every name and date is exactly right. Printed on heavy matte paper, 18×24 inches, U.S. shipping included. Very old, small photos may print a little soft — that's normal for enlargements.</p>
-                <figure class="photo-frame poster-sample"> <img src="assets/sample-family-tree-poster.webp" alt="Sample Family Tree Photo Poster: a five-generation family tree on aged parchment, titled &ldquo;Our Family Tree,&rdquo; with a photo medallion beside each person" width="1920" height="1280" loading="lazy" /> <figcaption>Sample design — yours is built from your own tree and photos, and you approve a proof before anything prints.</figcaption> </figure> <a class="buy-btn order-btn" href="https://buy.stripe.com/cNi28j42hbWN9GsbXW2400m">Order now — $59</a>
-                
-              </div>
-              <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyTreePhotoPoster">$59</span></div>
-            </div>
+            
           </div>
           <div class="promise">
             <p><strong>The promise on every service:</strong> records actually read, not copied from someone else&rsquo;s tree &mdash; and when a trail runs cold, you get the honest dead end and what was searched, never a guess dressed up as an answer. Your downloadable file is yours to keep, with no subscription needed to access it later.</p>
@@ -1141,9 +1130,7 @@
             </article>
             <article class="guide-item">
               <h3><a href="guides/how-to-find-a-death-record.html">How to Find a Death Record for an Ancestor</a></h3>
-              <p>Where death records are kept, which indexes to search first, and what to try when no certificate exists.</p>
-            </article>
-          </div>
+                            <p>Where death records are kept, which indexes to search first, and what to try when no certificate exists.</p>             </article>             <article class="guide-item">               <h3><a href="guides/how-to-find-a-marriage-record.html">How to Find a Marriage Record for an Ancestor</a></h3>               <p>County licenses, registers, and bonds — and why the bride's home county is usually where the record lives.</p>             </article>             <article class="guide-item">               <h3><a href="guides/ancestor-census-records.html">How to Find Your Ancestor in Census Records</a></h3>               <p>How to read census pages from 1790 to 1950, work around name variants and neighbors, and what to use instead of the lost 1890 census.</p>             </article>             <article class="guide-item">               <h3><a href="guides/how-to-find-military-records.html">How to Find Military Service Records for an Ancestor</a></h3>               <p>Service records, pension files, and draft cards from the Civil War through WWII — where they are and how to request them.</p>             </article>             <article class="guide-item">               <h3><a href="puzzles/crossword-1.html">Weekly Genealogy Puzzle</a></h3>               <p>A fillable crossword or word search every Wednesday — free to play, no sign-up needed.</p>             </article>           </div>
         </div>
       </section>
 
@@ -1260,7 +1247,7 @@
 
       <div class="root-divider" aria-hidden="true"><span class="root-divider-motif"><svg width="104" height="52" viewBox="0 0 104 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke-linecap="round" fill="none"><path class="rb-rust" d="M52 26 V14" stroke-width="1.6"/><path class="rb-olive" d="M52 18 C46 15 40 13 34 7" stroke-width="1.4"/><path class="rb-olive" d="M52 18 C58 15 64 13 70 7" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C45 20 38 18 31 13" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C59 20 66 18 73 13" stroke-width="1.4"/><path class="rb-olive" d="M52 14 C50 10 47 7 43 4" stroke-width="1.3"/><path class="rb-olive" d="M52 14 C54 10 57 7 61 4" stroke-width="1.3"/><path class="rb-rust" d="M52 26 V38" stroke-width="1.6"/><path class="rb-olive" d="M52 30 C45 32 38 34 31 39" stroke-width="1.3"/><path class="rb-olive" d="M52 30 C59 32 66 34 73 39" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C46 37 40 39 34 45" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C58 37 64 39 70 45" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C50 42 47 45 43 48" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C54 42 57 45 61 48" stroke-width="1.3"/></g><circle class="rb-dot-rust" cx="34" cy="7" r="1.9"/><circle class="rb-dot-olive" cx="70" cy="7" r="1.9"/><circle class="rb-dot-gold" cx="31" cy="13" r="1.6"/><circle class="rb-dot-gold" cx="73" cy="13" r="1.6"/><circle class="rb-dot-olive" cx="43" cy="4" r="1.6"/><circle class="rb-dot-rust" cx="61" cy="4" r="1.6"/></svg></span></div>
 
-      <!-- ============ RESEARCH INFORMATION SHEET ============ -->       <section class="feedback info-sheet" id="research-info" aria-labelledby="research-info-heading">         <div class="wrap">           <h2 id="research-info-heading">Research Information Sheet</h2>           <p class="lede">Ordering a service, or thinking about it? <strong>Tell us who you want researched and what you already know</strong> &mdash; the more you share here, the faster the research can start. Leave anything you don&rsquo;t know blank.</p>           <form class="feedback-form ris-form" id="ris-form" novalidate>             <h3 class="ris-subhead">About you</h3>             <div class="fb-field">               <label class="fb-label" for="ris-name">Your name</label>               <input class="fb-input" type="text" id="ris-name" name="name" autocomplete="name" required aria-describedby="ris-error" />             </div>             <div class="fb-field">               <label class="fb-label" for="ris-email">Your email</label>               <input class="fb-input" type="email" id="ris-email" name="email" autocomplete="email" required aria-describedby="ris-error" />             </div>             <div class="fb-field">               <label class="fb-label" for="ris-service">Service you want</label>               <select class="fb-input" id="ris-service" name="service">                 <option value="Not sure yet" selected>Not sure yet</option>                 <option value="Family Tree Error Check">Family Tree Error Check</option>                 <option value="Research Tier — Starter">Research Tier &mdash; Starter</option>                 <option value="Research Tier — Standard">Research Tier &mdash; Standard</option>                 <option value="Research Tier — Deep Dive">Research Tier &mdash; Deep Dive</option>                 <option value="Start Your Family Tree">Start Your Family Tree</option>                 <option value="Record Lookup">Record Lookup</option>                 <option value="One-Ancestor Report">One-Ancestor Report</option>                 <option value="Obituary &amp; Newspaper Search">Obituary &amp; Newspaper Search</option>                 <option value="Vital Records Pack">Vital Records Pack</option>                 <option value="Military Service Records">Military Service Records</option>                 <option value="Wills &amp; Probate Search">Wills &amp; Probate Search</option>                 <option value="Surname Origin Report">Surname Origin Report</option>                 <option value="Trace a Life">Trace a Life</option>                 <option value="Cemetery Records Pack">Cemetery Records Pack</option>                 <option value="Old Record Translation">Old Record Translation</option>                 <option value="Family Story Write-Up">Family Story Write-Up</option>                 <option value="DNA Match Helper">DNA Match Helper</option>                 <option value="Brick-Wall Breakthrough">Brick-Wall Breakthrough</option>                 <option value="Lineage Extension">Lineage Extension</option>                 <option value="Immigrant Origins Search">Immigrant Origins Search</option>                 <option value="Lineage Society Help">Lineage Society Help</option>                 <option value="Family History Book">Family History Book</option>                 <option value="Family Tree Photo Poster">Family Tree Photo Poster</option>               </select>             </div>             <h3 class="ris-subhead">The person or family you want researched</h3>             <div class="fb-field">               <label class="fb-label" for="ris-person-name">Full name <span class="fb-optional">(of the person or family)</span></label>               <input class="fb-input" type="text" id="ris-person-name" name="person-name" />             </div>             <div class="ris-grid">               <div class="fb-field">                 <label class="fb-label" for="ris-birth-date">Birth date <span class="fb-optional">(as exact as you know)</span></label>                 <input class="fb-input" type="text" id="ris-birth-date" name="birth-date" />               </div>               <div class="fb-field">                 <label class="fb-label" for="ris-birth-place">Birth place</label>                 <input class="fb-input" type="text" id="ris-birth-place" name="birth-place" />               </div>               <div class="fb-field">                 <label class="fb-label" for="ris-death-date">Death date <span class="fb-optional">(as exact as you know)</span></label>                 <input class="fb-input" type="text" id="ris-death-date" name="death-date" />               </div>               <div class="fb-field">                 <label class="fb-label" for="ris-death-place">Death place</label>                 <input class="fb-input" type="text" id="ris-death-place" name="death-place" />               </div>             </div>             <div class="fb-field">               <label class="fb-label" for="ris-spouse">Spouse&rsquo;s name</label>               <input class="fb-input" type="text" id="ris-spouse" name="spouse" />             </div>             <div class="fb-field">               <label class="fb-label" for="ris-parents">Parents&rsquo; names</label>               <input class="fb-input" type="text" id="ris-parents" name="parents" />             </div>             <h3 class="ris-subhead">What you know so far</h3>             <div class="fb-field">               <label class="fb-label" for="ris-known">What you already know about them</label>               <textarea class="fb-input" id="ris-known" name="known" rows="4"></textarea>             </div>             <div class="fb-field">               <label class="fb-label" for="ris-records">Records or documents you already have</label>               <textarea class="fb-input" id="ris-records" name="records" rows="3"></textarea>             </div>             <div class="fb-field">               <label class="fb-label" for="ris-goals">Your specific questions or goals for the research</label>               <textarea class="fb-input" id="ris-goals" name="goals" rows="4"></textarea>             </div>             <div class="fb-field">               <label class="fb-label" for="ris-notes">Anything else <span class="fb-optional">(optional)</span></label>               <textarea class="fb-input" id="ris-notes" name="notes" rows="3"></textarea>             </div>             <p class="fb-error" id="ris-error" role="alert" hidden>Please add your name and your email before sending &mdash; we need both so we can reply to you.</p>             <button class="buy-btn" type="submit">Send information sheet</button>           </form>           <p class="fb-note">Submitting opens your email app with your information sheet addressed to us &mdash; nothing is sent until you press Send in your email.</p>         </div>       </section>       <div class="root-divider" aria-hidden="true"><span class="root-divider-motif"><svg width="104" height="52" viewBox="0 0 104 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke-linecap="round" fill="none"><path class="rb-rust" d="M52 26 V14" stroke-width="1.6"/><path class="rb-olive" d="M52 18 C46 15 40 13 34 7" stroke-width="1.4"/><path class="rb-olive" d="M52 18 C58 15 64 13 70 7" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C45 20 38 18 31 13" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C59 20 66 18 73 13" stroke-width="1.4"/><path class="rb-olive" d="M52 14 C50 10 47 7 43 4" stroke-width="1.3"/><path class="rb-olive" d="M52 14 C54 10 57 7 61 4" stroke-width="1.3"/><path class="rb-rust" d="M52 26 V38" stroke-width="1.6"/><path class="rb-olive" d="M52 30 C45 32 38 34 31 39" stroke-width="1.3"/><path class="rb-olive" d="M52 30 C59 32 66 34 73 39" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C46 37 40 39 34 45" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C58 37 64 39 70 45" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C50 42 47 45 43 48" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C54 42 57 45 61 48" stroke-width="1.3"/></g><circle class="rb-dot-rust" cx="34" cy="7" r="1.9"/><circle class="rb-dot-olive" cx="70" cy="7" r="1.9"/><circle class="rb-dot-gold" cx="31" cy="13" r="1.6"/><circle class="rb-dot-gold" cx="73" cy="13" r="1.6"/><circle class="rb-dot-olive" cx="43" cy="4" r="1.6"/><circle class="rb-dot-rust" cx="61" cy="4" r="1.6"/></svg></span></div>       <!-- ============ FEEDBACK ============ -->
+            <!-- ============ RESEARCH INFORMATION SHEET ============ -->       <section class="feedback info-sheet" id="research-info" aria-labelledby="research-info-heading">         <div class="wrap">           <h2 id="research-info-heading">Research Information Sheet</h2>           <div class="ris-welcome" id="ris-welcome" hidden>             <p><strong>Thanks for your order &mdash; tell us about your research so we can get started.</strong> <span id="ris-welcome-service"></span> Your service is already picked in the form below &mdash; just fill in what you know and send the sheet.</p>           </div>           <p class="lede">Ordering a service, or thinking about it? <strong>Pick your service and this form changes to ask just what that service needs</strong> &mdash; no long list of questions that don&rsquo;t apply to you. Leave anything you don&rsquo;t know blank; the more you share, the faster the research can start.</p>           <form class="feedback-form ris-form" id="ris-form" novalidate>             <h3 class="ris-subhead">About you</h3>             <div class="fb-field">               <label class="fb-label" for="ris-name">Your name</label>               <input class="fb-input" type="text" id="ris-name" name="name" autocomplete="name" required aria-describedby="ris-error" />             </div>             <div class="fb-field">               <label class="fb-label" for="ris-email">Your email</label>               <input class="fb-input" type="email" id="ris-email" name="email" autocomplete="email" required aria-describedby="ris-error" />             </div>             <div class="fb-field">               <label class="fb-label" for="ris-service">Service you want</label>               <select class="fb-input" id="ris-service" name="service">                 <option value="Not sure yet" selected>Not sure yet</option>                 <option value="Start Your Family Tree">Start Your Family Tree</option>                 <option value="Family Tree Error Check">Family Tree Error Check</option>                 <option value="Research Tier — Starter">Research Tier &mdash; Starter</option>                 <option value="Research Tier — Standard">Research Tier &mdash; Standard</option>                 <option value="Research Tier — Deep Dive">Research Tier &mdash; Deep Dive</option>                 <option value="Record Lookup">Record Lookup</option>                 <option value="One-Ancestor Report">One-Ancestor Report</option>                 <option value="Obituary &amp; Newspaper Search">Obituary &amp; Newspaper Search</option>                 <option value="Vital Records Pack">Vital Records Pack</option>                 <option value="Military Service Records">Military Service Records</option>                 <option value="Wills &amp; Probate Search">Wills &amp; Probate Search</option>                 <option value="Surname Origin Report">Surname Origin Report</option>                 <option value="Trace a Life">Trace a Life</option>                 <option value="Cemetery Records Pack">Cemetery Records Pack</option>                 <option value="Old Record Translation">Old Record Translation</option>                 <option value="Family Story Write-Up">Family Story Write-Up</option>                 <option value="DNA Match Helper">DNA Match Helper</option>                 <option value="Brick-Wall Breakthrough">Brick-Wall Breakthrough</option>                 <option value="Lineage Extension">Lineage Extension</option>                 <option value="Immigrant Origins Search">Immigrant Origins Search</option>                 <option value="Lineage Society Help">Lineage Society Help</option>                 <option value="Family History Book">Family History Book</option>               </select>             </div>             <p class="ris-service-hint" id="ris-service-hint">Not sure which service fits? Leave this on &ldquo;Not sure yet&rdquo; and tell us what you&rsquo;re trying to find out below.</p>              <div id="ris-dynamic">               <h3 class="ris-subhead" id="ris-dynamic-heading" aria-live="polite">Tell us what you&rsquo;re looking for</h3>                <!-- Not sure yet -->               <div class="ris-group" data-group="not-sure">                 <p class="ris-group-intro">No problem &mdash; tell us in the <strong>Anything else</strong> box below what you&rsquo;re trying to find out, who it&rsquo;s about, and anything you already know, and we&rsquo;ll point you to the right service.</p>               </div>                <!-- Start Your Family Tree -->               <div class="ris-group" data-group="start-tree" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-st-self">You &mdash; the starting person <span class="fb-optional">(your full name, birth date and birthplace, as much as you want to share)</span></label>                   <input class="fb-input" type="text" id="ris-st-self" data-label="Starting person (you)" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-st-parents">Your parents&rsquo; names <span class="fb-optional">(birth dates and places too, if you know them)</span></label>                   <textarea class="fb-input" id="ris-st-parents" data-label="Parents' names" rows="3"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-st-grandparents">Your grandparents&rsquo; names <span class="fb-optional">(if known &mdash; any side, even just one)</span></label>                   <textarea class="fb-input" id="ris-st-grandparents" data-label="Grandparents' names" rows="3"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-st-places">Where the family lived <span class="fb-optional">(towns, counties, states or countries &mdash; whatever you know)</span></label>                   <input class="fb-input" type="text" id="ris-st-places" data-label="Where the family lived" />                 </div>               </div>                <!-- Record-style lookups: Record Lookup / Vital Records Pack / Obituary & Newspaper Search -->               <div class="ris-group" data-group="records" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-rec-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-rec-name" data-label="Ancestor's full name" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-rec-birth">Birth date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-rec-birth" data-label="Birth date and place" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-rec-death">Death date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-rec-death" data-label="Death date and place" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-rec-wanted">What record are you hoping to find? <span class="fb-optional">(for example: a birth certificate, an obituary, a marriage record)</span></label>                   <textarea class="fb-input" id="ris-rec-wanted" data-label="Record hoped for" rows="3"></textarea>                 </div>               </div>                <!-- Cemetery Records Pack -->               <div class="ris-group" data-group="cemetery" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-cem-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-cem-name" data-label="Ancestor's full name" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-cem-birth">Birth date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-cem-birth" data-label="Birth date and place" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-cem-death">Death date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-cem-death" data-label="Death date and place" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-cem-cemetery">Cemetery name <span class="fb-optional">(if known &mdash; and the town or county it&rsquo;s in)</span></label>                   <input class="fb-input" type="text" id="ris-cem-cemetery" data-label="Cemetery name" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-cem-wanted">What are you hoping to find? <span class="fb-optional">(for example: a burial record, a headstone photo, who else is in the plot)</span></label>                   <textarea class="fb-input" id="ris-cem-wanted" data-label="What they hope to find" rows="3"></textarea>                 </div>               </div>                <!-- Military Service Records -->               <div class="ris-group" data-group="military" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-mil-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-mil-name" data-label="Ancestor's full name" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-mil-dates">Birth and death dates &amp; places <span class="fb-optional">(as much as you know)</span></label>                   <input class="fb-input" type="text" id="ris-mil-dates" data-label="Birth and death dates/places" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-mil-branch">Branch of service <span class="fb-optional">(if known &mdash; Army, Navy, Marines&hellip;)</span></label>                     <input class="fb-input" type="text" id="ris-mil-branch" data-label="Branch of service" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-mil-war">War or era <span class="fb-optional">(if known &mdash; Civil War, WWII, peacetime&hellip;)</span></label>                     <input class="fb-input" type="text" id="ris-mil-war" data-label="War or era" />                   </div>                 </div>               </div>                <!-- Wills & Probate Search -->               <div class="ris-group" data-group="wills" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-will-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-will-name" data-label="Ancestor's full name" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-will-death">Death date &amp; place <span class="fb-optional">(as exact as you know)</span></label>                     <input class="fb-input" type="text" id="ris-will-death" data-label="Death date and place" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-will-county">County <span class="fb-optional">(if known &mdash; probate is filed by county)</span></label>                     <input class="fb-input" type="text" id="ris-will-county" data-label="County" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-will-hope">What are you hoping the will or probate file will tell you? <span class="fb-optional">(optional)</span></label>                   <textarea class="fb-input" id="ris-will-hope" data-label="What they hope it will tell them" rows="3"></textarea>                 </div>               </div>                <!-- One-Ancestor Report / Trace a Life -->               <div class="ris-group" data-group="one-ancestor" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-one-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-one-name" data-label="Ancestor's full name" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-one-birth">Birth date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-one-birth" data-label="Birth date and place" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-one-death">Death date &amp; place <span class="fb-optional">(if known)</span></label>                     <input class="fb-input" type="text" id="ris-one-death" data-label="Death date and place" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-one-learn">What do you most want to learn about them?</label>                   <textarea class="fb-input" id="ris-one-learn" data-label="What they most want to learn" rows="4"></textarea>                 </div>               </div>                <!-- Surname Origin Report -->               <div class="ris-group" data-group="surname" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-sur-name">The surname</label>                   <input class="fb-input" type="text" id="ris-sur-name" data-label="Surname" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-sur-places">Where your family with this name lived <span class="fb-optional">(places and rough dates, as far back as you know)</span></label>                   <textarea class="fb-input" id="ris-sur-places" data-label="Where the family lived" rows="3"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-sur-earliest">Earliest ancestor you know with this name <span class="fb-optional">(optional)</span></label>                   <input class="fb-input" type="text" id="ris-sur-earliest" data-label="Earliest known ancestor with the surname" />                 </div>               </div>                <!-- Brick-Wall Breakthrough / Lineage Extension -->               <div class="ris-group" data-group="brick-wall" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-bw-name">The ancestor where the line stops <span class="fb-optional">(full name)</span></label>                   <input class="fb-input" type="text" id="ris-bw-name" data-label="Ancestor where the line stops" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-bw-known">What is known about them <span class="fb-optional">(dates, places, spouse, children &mdash; anything solid)</span></label>                   <textarea class="fb-input" id="ris-bw-known" data-label="What is known about them" rows="4"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-bw-tried">What has already been tried? <span class="fb-optional">(records searched, sites checked, family stories &mdash; so we don&rsquo;t repeat it)</span></label>                   <textarea class="fb-input" id="ris-bw-tried" data-label="What has already been tried" rows="4"></textarea>                 </div>               </div>                <!-- Immigrant Origins Search -->               <div class="ris-group" data-group="immigrant" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-imm-name">Ancestor&rsquo;s full name</label>                   <input class="fb-input" type="text" id="ris-imm-name" data-label="Ancestor's full name" />                 </div>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-imm-country">Country of origin <span class="fb-optional">(if known &mdash; a region or town is even better)</span></label>                     <input class="fb-input" type="text" id="ris-imm-country" data-label="Country of origin" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-imm-arrival">Roughly when they arrived <span class="fb-optional">(a year, a decade, or &ldquo;before 1900&rdquo; all help)</span></label>                     <input class="fb-input" type="text" id="ris-imm-arrival" data-label="Roughly when they arrived" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-imm-settled">Where they settled <span class="fb-optional">(if known)</span></label>                   <input class="fb-input" type="text" id="ris-imm-settled" data-label="Where they settled" />                 </div>               </div>                <!-- Family Tree Error Check / Research Tiers -->               <div class="ris-group" data-group="tree-file" data-attach="Please attach your GEDCOM tree file (.ged) to the email this form opens." hidden>                 <p class="ris-attach-note"><strong>Attach your tree file to the email:</strong> when you send this sheet, your email app opens with everything filled in &mdash; attach your GEDCOM tree file (.ged) to that email before you press Send, and that&rsquo;s how we receive your tree. No file handy? Tell us below where your tree lives (Ancestry, MyHeritage, a program on your computer) and we&rsquo;ll sort out the next step by email.</p>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-tree-size">About how big is your tree? <span class="fb-optional">(if known &mdash; roughly how many people)</span></label>                     <input class="fb-input" type="text" id="ris-tree-size" data-label="Approximate tree size" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-tree-where">Where does your tree live? <span class="fb-optional">(site or program name)</span></label>                     <input class="fb-input" type="text" id="ris-tree-where" data-label="Where the tree lives" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-tree-focus">Anything you especially want checked or built out? <span class="fb-optional">(a line that worries you, a branch to extend)</span></label>                   <textarea class="fb-input" id="ris-tree-focus" data-label="Focus or concerns" rows="3"></textarea>                 </div>               </div>                <!-- DNA Match Helper -->               <div class="ris-group" data-group="dna" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-dna-company">Which company did you test with? <span class="fb-optional">(AncestryDNA, 23andMe, MyHeritage, FamilyTreeDNA&hellip;)</span></label>                   <input class="fb-input" type="text" id="ris-dna-company" data-label="DNA testing company" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-dna-matches">Your top matches <span class="fb-optional">(paste your closest matches here, or describe them &mdash; names as shown, shared cM, any trees they have)</span></label>                   <textarea class="fb-input" id="ris-dna-matches" data-label="Top DNA matches" rows="5"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-dna-goal">What are you trying to figure out? <span class="fb-optional">(for example: who a match&rsquo;s family is, or which line a match belongs to)</span></label>                   <textarea class="fb-input" id="ris-dna-goal" data-label="What they are trying to figure out" rows="3"></textarea>                 </div>               </div>                <!-- Old Record Translation -->               <div class="ris-group" data-group="translation" data-attach="Please attach a scan or photo of the document to the email this form opens." hidden>                 <p class="ris-attach-note"><strong>Attach the document to the email:</strong> when you send this sheet, your email app opens with everything filled in &mdash; attach a clear scan or photo of the document to that email before you press Send, and that&rsquo;s how we receive it.</p>                 <div class="ris-grid">                   <div class="fb-field">                     <label class="fb-label" for="ris-tr-language">Document language <span class="fb-optional">(if you know it &mdash; German, Latin, French&hellip;)</span></label>                     <input class="fb-input" type="text" id="ris-tr-language" data-label="Document language" />                   </div>                   <div class="fb-field">                     <label class="fb-label" for="ris-tr-type">Document type <span class="fb-optional">(birth record, letter, church entry&hellip;)</span></label>                     <input class="fb-input" type="text" id="ris-tr-type" data-label="Document type" />                   </div>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-tr-about">Anything you know about the document <span class="fb-optional">(whose it is, roughly when it&rsquo;s from)</span></label>                   <textarea class="fb-input" id="ris-tr-about" data-label="What they know about the document" rows="3"></textarea>                 </div>               </div>                <!-- Family Story Write-Up / Family History Book -->               <div class="ris-group" data-group="story" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-story-who">Who is the story about? <span class="fb-optional">(a person, a couple, or a whole family line)</span></label>                   <input class="fb-input" type="text" id="ris-story-who" data-label="Who the story is about" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-story-material">What material do you already have? <span class="fb-optional">(records, photos, letters, interviews, stories told in the family&hellip;)</span></label>                   <textarea class="fb-input" id="ris-story-material" data-label="Material they already have" rows="4"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-story-must">Anything that must be in it? <span class="fb-optional">(a favorite story, a person not to leave out, who it&rsquo;s for)</span></label>                   <textarea class="fb-input" id="ris-story-must" data-label="Must-include notes" rows="3"></textarea>                 </div>               </div>                <!-- Lineage Society Help -->               <div class="ris-group" data-group="lineage-society" hidden>                 <div class="fb-field">                   <label class="fb-label" for="ris-lin-society">Society name <span class="fb-optional">(for example: DAR, SAR, Mayflower Society&hellip;)</span></label>                   <input class="fb-input" type="text" id="ris-lin-society" data-label="Lineage society" />                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-lin-ancestor">The ancestor line you want to join under <span class="fb-optional">(the qualifying ancestor&rsquo;s name, and your line down from them as far as you know it)</span></label>                   <textarea class="fb-input" id="ris-lin-ancestor" data-label="Ancestor line for the application" rows="4"></textarea>                 </div>                 <div class="fb-field">                   <label class="fb-label" for="ris-lin-docs">How much of the line is already documented? <span class="fb-optional">(which generations have proof, and where the gaps are)</span></label>                   <textarea class="fb-input" id="ris-lin-docs" data-label="Documentation already in hand" rows="3"></textarea>                 </div>               </div>              </div>              <h3 class="ris-subhead">Anything else</h3>             <div class="fb-field">               <label class="fb-label" for="ris-notes">Anything else <span class="fb-optional">(optional)</span></label>               <textarea class="fb-input" id="ris-notes" name="notes" rows="3"></textarea>             </div>             <p class="fb-error" id="ris-error" role="alert" hidden>Please add your name and your email before sending &mdash; we need both so we can reply to you.</p>             <button class="buy-btn" type="submit">Send information sheet</button>           </form>           <p class="fb-note">Submitting opens your email app with your information sheet addressed to us &mdash; nothing is sent until you press Send in your email.</p>         </div>       </section>       <div class="root-divider" aria-hidden="true"><span class="root-divider-motif"><svg width="104" height="52" viewBox="0 0 104 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke-linecap="round" fill="none"><path class="rb-rust" d="M52 26 V14" stroke-width="1.6"/><path class="rb-olive" d="M52 18 C46 15 40 13 34 7" stroke-width="1.4"/><path class="rb-olive" d="M52 18 C58 15 64 13 70 7" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C45 20 38 18 31 13" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C59 20 66 18 73 13" stroke-width="1.4"/><path class="rb-olive" d="M52 14 C50 10 47 7 43 4" stroke-width="1.3"/><path class="rb-olive" d="M52 14 C54 10 57 7 61 4" stroke-width="1.3"/><path class="rb-rust" d="M52 26 V38" stroke-width="1.6"/><path class="rb-olive" d="M52 30 C45 32 38 34 31 39" stroke-width="1.3"/><path class="rb-olive" d="M52 30 C59 32 66 34 73 39" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C46 37 40 39 34 45" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C58 37 64 39 70 45" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C50 42 47 45 43 48" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C54 42 57 45 61 48" stroke-width="1.3"/></g><circle class="rb-dot-rust" cx="34" cy="7" r="1.9"/><circle class="rb-dot-olive" cx="70" cy="7" r="1.9"/><circle class="rb-dot-gold" cx="31" cy="13" r="1.6"/><circle class="rb-dot-gold" cx="73" cy="13" r="1.6"/><circle class="rb-dot-olive" cx="43" cy="4" r="1.6"/><circle class="rb-dot-rust" cx="61" cy="4" r="1.6"/></svg></span></div>       <!-- ============ FEEDBACK ============ -->
       <section class="feedback" id="feedback" aria-labelledby="feedback-heading">
         <div class="wrap">
           <h2 id="feedback-heading">Feedback</h2>
@@ -1560,8 +1547,7 @@
         cemeteryRecords: 9.99,
         recordTranslation: 25,
         dnaMatchHelper: 39,
-        familyHistoryBook: 99,
-        familyTreePhotoPoster: 59
+        familyHistoryBook: 99
       };
 
       document.querySelectorAll("[data-price]").forEach(function (el) {
@@ -2126,4 +2112,259 @@
             "&body=" + encodeURIComponent(body);
         });
       })();
-    </script> <script> /* RESEARCH INFORMATION SHEET — like the Feedback form, this page has no server, so sending the sheet works by composing an email and opening the visitor's own email app with it addressed to admin@tree-detective.com. Nothing is sent until the visitor presses Send in their email app. All values are URL-encoded. */ (function () { var form = document.getElementById("ris-form"); if (!form) return; var errorEl = document.getElementById("ris-error"); function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; } function orBlank(id) { return val(id) || "(not given)"; } function checkRequired() { if (val("ris-name") && val("ris-email")) errorEl.hidden = true; } document.getElementById("ris-name").addEventListener("input", checkRequired); document.getElementById("ris-email").addEventListener("input", checkRequired); form.addEventListener("submit", function (event) { event.preventDefault(); var name = val("ris-name"); var email = val("ris-email"); if (!name || !email || email.indexOf("@") === -1) { errorEl.hidden = false; (name ? document.getElementById("ris-email") : document.getElementById("ris-name")).focus(); return; } errorEl.hidden = true; var body = [ "Name: " + name, "Email: " + email, "Service wanted: " + orBlank("ris-service"), "", "Person or family to be researched:", "Full name: " + orBlank("ris-person-name"), "Birth date: " + orBlank("ris-birth-date"), "Birth place: " + orBlank("ris-birth-place"), "Death date: " + orBlank("ris-death-date"), "Death place: " + orBlank("ris-death-place"), "Spouse's name: " + orBlank("ris-spouse"), "Parents' names: " + orBlank("ris-parents"), "", "What you already know about them:", orBlank("ris-known"), "", "Records or documents you already have:", orBlank("ris-records"), "", "Your questions or goals for the research:", orBlank("ris-goals"), "", "Anything else:", orBlank("ris-notes") ].join(String.fromCharCode(10)); window.location.href = "mailto:admin@tree-detective.com" + "?subject=" + encodeURIComponent("Research Information Sheet") + "&body=" + encodeURIComponent(body); }); })(); </script> </body> </html>
+
+    </script>
+    <script>
+      /*
+        RESEARCH INFORMATION SHEET — SMART FORM.
+        One form that changes per service: picking a service shows only the
+        questions that service needs. Like the Feedback form, this page has
+        no server, so sending works by composing an email and opening the
+        visitor's own email app addressed to admin@tree-detective.com.
+        Nothing is sent until the visitor presses Send in their email app.
+        All values are URL-encoded.
+
+        Arriving from a payment link: a service can be pre-set with
+        ?service=record-lookup before the #research-info anchor, or with a
+        service value in the hash (e.g. #research-info?service=record-lookup
+        or #service-record-lookup). When that happens the form opens with
+        the service selected, its questions showing, and a short
+        "Thanks for your order" welcome at the top of the section.
+      */
+      (function () {
+        var form = document.getElementById("ris-form");
+        if (!form) return;
+        var errorEl = document.getElementById("ris-error");
+        var serviceEl = document.getElementById("ris-service");
+        var headingEl = document.getElementById("ris-dynamic-heading");
+        var hintEl = document.getElementById("ris-service-hint");
+        var welcomeEl = document.getElementById("ris-welcome");
+        var welcomeServiceEl = document.getElementById("ris-welcome-service");
+
+        var GROUP_FOR = {
+          "Not sure yet": "not-sure",
+          "Start Your Family Tree": "start-tree",
+          "Record Lookup": "records",
+          "Vital Records Pack": "records",
+          "Obituary & Newspaper Search": "records",
+          "Cemetery Records Pack": "cemetery",
+          "Military Service Records": "military",
+          "Wills & Probate Search": "wills",
+          "One-Ancestor Report": "one-ancestor",
+          "Trace a Life": "one-ancestor",
+          "Surname Origin Report": "surname",
+          "Brick-Wall Breakthrough": "brick-wall",
+          "Lineage Extension": "brick-wall",
+          "Immigrant Origins Search": "immigrant",
+          "Family Tree Error Check": "tree-file",
+          "Research Tier — Starter": "tree-file",
+          "Research Tier — Standard": "tree-file",
+          "Research Tier — Deep Dive": "tree-file",
+          "DNA Match Helper": "dna",
+          "Old Record Translation": "translation",
+          "Family Story Write-Up": "story",
+          "Family History Book": "story",
+          "Lineage Society Help": "lineage-society"
+        };
+
+        var SLUG_FOR = {
+          "not-sure-yet": "Not sure yet",
+          "start-your-family-tree": "Start Your Family Tree",
+          "start-family-tree": "Start Your Family Tree",
+          "family-tree-error-check": "Family Tree Error Check",
+          "error-check": "Family Tree Error Check",
+          "research-tier-starter": "Research Tier — Starter",
+          "tier-starter": "Research Tier — Starter",
+          "starter": "Research Tier — Starter",
+          "research-tier-standard": "Research Tier — Standard",
+          "tier-standard": "Research Tier — Standard",
+          "standard": "Research Tier — Standard",
+          "research-tier-deep-dive": "Research Tier — Deep Dive",
+          "tier-deep-dive": "Research Tier — Deep Dive",
+          "deep-dive": "Research Tier — Deep Dive",
+          "record-lookup": "Record Lookup",
+          "one-ancestor-report": "One-Ancestor Report",
+          "obituary-newspaper-search": "Obituary & Newspaper Search",
+          "obituary-and-newspaper-search": "Obituary & Newspaper Search",
+          "vital-records-pack": "Vital Records Pack",
+          "military-service-records": "Military Service Records",
+          "wills-probate-search": "Wills & Probate Search",
+          "wills-and-probate-search": "Wills & Probate Search",
+          "surname-origin-report": "Surname Origin Report",
+          "trace-a-life": "Trace a Life",
+          "cemetery-records-pack": "Cemetery Records Pack",
+          "old-record-translation": "Old Record Translation",
+          "family-story-write-up": "Family Story Write-Up",
+          "dna-match-helper": "DNA Match Helper",
+          "brick-wall-breakthrough": "Brick-Wall Breakthrough",
+          "lineage-extension": "Lineage Extension",
+          "immigrant-origins-search": "Immigrant Origins Search",
+          "lineage-society-help": "Lineage Society Help",
+          "family-history-book": "Family History Book"
+        };
+
+        function slugify(text) {
+          return String(text || "")
+            .toLowerCase()
+            .replace(/&/g, " and ")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+        }
+
+        function resolveService(raw) {
+          if (!raw) return "";
+          var decoded = raw;
+          try { decoded = decodeURIComponent(raw); } catch (e) { /* keep raw */ }
+          decoded = decoded.replace(/\+/g, " ").trim();
+          if (!decoded) return "";
+          // Exact option value (case-insensitive)?
+          for (var i = 0; i < serviceEl.options.length; i++) {
+            if (serviceEl.options[i].value.toLowerCase() === decoded.toLowerCase()) {
+              return serviceEl.options[i].value;
+            }
+          }
+          var slug = slugify(decoded);
+          if (SLUG_FOR[slug]) return SLUG_FOR[slug];
+          // Hash forms like "research-info-record-lookup" or "service-record-lookup"
+          var prefixes = ["research-info-", "service-", "ris-"];
+          for (var j = 0; j < prefixes.length; j++) {
+            if (slug.indexOf(prefixes[j]) === 0) {
+              var rest = slug.slice(prefixes[j].length);
+              if (SLUG_FOR[rest]) return SLUG_FOR[rest];
+            }
+          }
+          // Any known slug appearing inside the value?
+          for (var key in SLUG_FOR) {
+            if (Object.prototype.hasOwnProperty.call(SLUG_FOR, key) && slug.indexOf(key) !== -1) {
+              return SLUG_FOR[key];
+            }
+          }
+          return "";
+        }
+
+        function serviceFromUrl() {
+          var found = "";
+          try {
+            var params = new URLSearchParams(window.location.search);
+            found = resolveService(params.get("service") || params.get("s") || params.get("product") || "");
+          } catch (e) { /* older browser: fall through to hash parsing */ }
+          if (found) return found;
+          var hash = window.location.hash || "";
+          if (!hash) return "";
+          var hashBody = hash.slice(1);
+          var q = hashBody.indexOf("?");
+          if (q !== -1) {
+            try {
+              var hp = new URLSearchParams(hashBody.slice(q + 1));
+              found = resolveService(hp.get("service") || "");
+              if (found) return found;
+            } catch (e) { /* ignore */ }
+            hashBody = hashBody.slice(0, q);
+          }
+          var eq = hashBody.indexOf("service=");
+          if (eq !== -1) {
+            found = resolveService(hashBody.slice(eq + 8).split("&")[0]);
+            if (found) return found;
+          }
+          return resolveService(hashBody);
+        }
+
+        function showGroup(service) {
+          var groupName = GROUP_FOR[service] || "not-sure";
+          var groups = form.querySelectorAll(".ris-group");
+          for (var i = 0; i < groups.length; i++) {
+            groups[i].hidden = groups[i].getAttribute("data-group") !== groupName;
+          }
+          if (service === "Not sure yet") {
+            headingEl.textContent = "Tell us what you\u2019re looking for";
+            hintEl.textContent = "Not sure which service fits? Leave this on \u201CNot sure yet\u201D and tell us what you\u2019re trying to find out below.";
+          } else {
+            headingEl.textContent = "Tell us about your " + service;
+            hintEl.textContent = "Showing just the questions for " + service + " \u2014 leave anything you don\u2019t know blank.";
+          }
+        }
+
+        serviceEl.addEventListener("change", function () {
+          showGroup(serviceEl.value);
+        });
+
+        // Pre-set from the URL (e.g. arriving from a Stripe payment link).
+        var preset = serviceFromUrl();
+        if (preset) {
+          serviceEl.value = preset;
+          if (welcomeEl) {
+            welcomeEl.hidden = false;
+            if (welcomeServiceEl) welcomeServiceEl.textContent = "You ordered: " + preset + ".";
+          }
+          // If the service came in the hash, the anchor alone won't scroll
+          // here, so bring the section into view.
+          if ((window.location.hash || "").indexOf("research-info") === -1 || (window.location.hash || "").indexOf("?") !== -1) {
+            var section = document.getElementById("research-info");
+            if (section && section.scrollIntoView) {
+              window.setTimeout(function () { section.scrollIntoView(); }, 60);
+            }
+          }
+        }
+        showGroup(serviceEl.value);
+
+        function val(id) {
+          var el = document.getElementById(id);
+          return el ? el.value.trim() : "";
+        }
+        function checkRequired() {
+          if (val("ris-name") && val("ris-email")) errorEl.hidden = true;
+        }
+        document.getElementById("ris-name").addEventListener("input", checkRequired);
+        document.getElementById("ris-email").addEventListener("input", checkRequired);
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var name = val("ris-name");
+          var email = val("ris-email");
+          if (!name || !email || email.indexOf("@") === -1) {
+            errorEl.hidden = false;
+            (name ? document.getElementById("ris-email") : document.getElementById("ris-name")).focus();
+            return;
+          }
+          errorEl.hidden = true;
+
+          var service = serviceEl.value;
+          var lines = [
+            "Name: " + name,
+            "Email: " + email,
+            "Service wanted: " + service,
+            ""
+          ];
+
+          var visibleGroup = form.querySelector('.ris-group:not([hidden])');
+          if (visibleGroup) {
+            lines.push("About your " + service + ":");
+            var fields = visibleGroup.querySelectorAll("[data-label]");
+            var anyField = false;
+            for (var i = 0; i < fields.length; i++) {
+              lines.push(fields[i].getAttribute("data-label") + ": " + (fields[i].value.trim() || "(not given)"));
+              anyField = true;
+            }
+            if (!anyField && service === "Not sure yet") {
+              lines.push("(See \u201CAnything else\u201D below.)");
+            }
+            var attach = visibleGroup.getAttribute("data-attach");
+            if (attach) {
+              lines.push("");
+              lines.push(attach);
+            }
+            lines.push("");
+          }
+
+          lines.push("Anything else:");
+          lines.push(val("ris-notes") || "(not given)");
+
+          window.location.href =
+            "mailto:admin@tree-detective.com" +
+            "?subject=" + encodeURIComponent("Research Information Sheet — " + service) +
+            "&body=" + encodeURIComponent(lines.join(String.fromCharCode(10)));
+        });
+      })();
+    </script>
+  </body>
+</html>
