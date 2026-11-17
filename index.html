@@ -54,7 +54,8 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lineage Extension" }, "price": "59", "priceCurrency": "USD" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Immigrant Origins Search" }, "price": "59", "priceCurrency": "USD" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lineage Society Help" }, "price": "79", "priceCurrency": "USD" },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family History Book" }, "price": "99", "priceCurrency": "USD" }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family History Book" }, "price": "99", "priceCurrency": "USD" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Tree Photo Poster" }, "price": "59", "priceCurrency": "USD" }
           ]
         }
       }
@@ -473,7 +474,7 @@
       .faq-item summary:hover { color: var(--rust-deep); }
       .faq-answer { padding: 0 28px 18px 0; }
       .faq-answer p { margin: 0; font-size: 16px; color: var(--ink-soft); max-width: 44em; }
-      ..faq-answer p strong { color: var(--ink); }
+      .faq-answer p strong { color: var(--ink); }
 
       /* ---------- Feedback ---------- */
       .feedback { padding: 8px 0 60px; }
@@ -1123,6 +1124,15 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyHistoryBook">$99</span></div>
             </div>
+            <div class="service-item">
+              <div>
+                <h3>Family Tree Photo Poster</h3>
+                <p>Your family tree as a real printed poster, mailed to your door. Send us your tree file (GEDCOM) and photos of your ancestors, and we lay out your direct line across five generations — up to 31 people — with each photo beside its person; anyone without a photo gets a neat name-and-dates medallion. Before anything prints, we email you a proof to approve, so every name and date is exactly right. Printed on heavy matte paper, 18×24 inches, U.S. shipping included. Very old, small photos may print a little soft — that's normal for enlargements.</p>
+                <a class="buy-btn order-btn" href="https://buy.stripe.com/cNi28j42hbWN9GsbXW2400m">Order now — $59</a>
+                <a class="email-order-link" href="mailto:admin@tree-detective.com?subject=Order%20%E2%80%94%20Family%20Tree%20Photo%20Poster%20%28%2459%29&amp;body=My%20name%3A%0AService%20I%20want%3A%20Family%20Tree%20Photo%20Poster%0APerson%20the%20poster%20is%20for%20%28full%20name%29%3A%0AI%20have%20attached%20my%20tree%20file%20%28GEDCOM%29%3A%20yes%20%2F%20no%0AI%20have%20attached%20photos%20of%20my%20ancestors%3A%20yes%20%2F%20no%0AMailing%20address%20for%20the%20poster%3A%0AI%20understand%20a%20proof%20will%20be%20emailed%20to%20me%20for%20approval%20before%20printing.">Order by email</a>
+              </div>
+              <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyTreePhotoPoster">$59</span></div>
+            </div>
           </div>
           <div class="promise">
             <p><strong>The promise on every service:</strong> records actually read, not copied from someone else&rsquo;s tree &mdash; and when a trail runs cold, you get the honest dead end and what was searched, never a guess dressed up as an answer. Your downloadable file is yours to keep, with no subscription needed to access it later.</p>
@@ -1577,7 +1587,8 @@
         cemeteryRecords: 9.99,
         recordTranslation: 25,
         dnaMatchHelper: 39,
-        familyHistoryBook: 99
+        familyHistoryBook: 99,
+        familyTreePhotoPoster: 59
       };
 
       document.querySelectorAll("[data-price]").forEach(function (el) {
