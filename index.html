@@ -616,6 +616,38 @@
       .viewer-drop-sub { margin: 0 0 14px; color: var(--ink-faint); font-size: 14px; }
       .viewer-file-btn { width: auto; padding-left: 32px; padding-right: 32px; cursor: pointer; }
       .viewer-drop-note { margin: 16px auto 0; font-size: 14.5px; color: var(--ink-soft); max-width: 36em; }
+      .viewer-scan {
+        margin-top: 30px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--olive);
+        border-radius: 12px; padding: 24px clamp(20px, 4vw, 36px) 26px;
+      }
+      .viewer-scan h2 { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 24px; line-height: 1.15; margin: 0 0 6px; }
+      .viewer-scan .viewer-scan-lede { margin: 0 0 18px; font-size: 16px; color: var(--ink-soft); max-width: 44em; }
+      .viewer-scan-btn {
+        font-family: "Public Sans", sans-serif; font-weight: 700; font-size: 15px;
+        background: transparent; color: var(--rust-deep); border: 1.5px solid var(--rust);
+        border-radius: 7px; padding: 9px 18px; cursor: pointer; min-height: 44px;
+      }
+      .viewer-scan-btn:hover { background: var(--paper-deep); }
+      .viewer-scan-hint { margin: 14px 0 0; font-size: 15.5px; color: var(--ink); }
+      .viewer-scan-results { margin-top: 22px; border-top: 2px solid var(--line); padding-top: 20px; }
+      .viewer-scan-list { list-style: none; margin: 0 0 18px; padding: 0; }
+      .viewer-scan-list li {
+        display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 16px;
+      }
+      .viewer-scan-list li:last-child { border-bottom: none; }
+      .scan-badge {
+        flex: none; font-family: "Public Sans", sans-serif; font-size: 12.5px; font-weight: 800;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        border: 2px solid currentColor; border-radius: 4px; padding: 5px 11px;
+      }
+      .scan-badge.found { color: var(--stamp-conflict); }
+      .scan-badge.clear { color: var(--stamp-supported); }
+      .viewer-scan-allclear { margin: 0 0 18px; font-size: 16px; color: var(--ink-soft); max-width: 44em; }
+      .viewer-scan-allclear strong { color: var(--ink); }
+      .viewer-scan-pitch { margin: 0 0 18px; font-size: 16px; color: var(--ink-soft); max-width: 44em; }
+      .viewer-scan-pitch strong { color: var(--ink); }
+      .viewer-scan .buy-btn { width: auto; padding-left: 30px; padding-right: 30px; }
       .viewer-error {
         border: 1.5px solid var(--rust); border-radius: 8px; background: var(--card);
         padding: 14px 18px; font-size: 15.5px; margin: 18px 0 0;
@@ -1331,6 +1363,19 @@
             </div>
           </div>
 
+          <div class="viewer-scan" id="viewer-scan">
+            <h2>Free scan — what shape is your tree in?</h2>
+            <p class="viewer-scan-lede">Load your tree file above, then scan it free. Your file never leaves your device — the scan runs entirely in your browser.</p>
+            <button type="button" class="viewer-scan-btn" id="viewer-scan-btn">Scan my tree — free</button>
+            <p class="viewer-scan-hint" id="viewer-scan-hint" role="alert" hidden>Load your tree file above first, then scan it free.</p>
+            <div class="viewer-scan-results" id="viewer-scan-results" hidden>
+              <ul class="viewer-scan-list" id="viewer-scan-list"></ul>
+              <p class="viewer-scan-allclear" id="viewer-scan-allclear" hidden>Good news — this quick scan found none of the common problem types. A full Error Check still digs deeper.</p>
+              <p class="viewer-scan-pitch">This free scan shows only the types of problems in your tree. The full Family Tree Error Check lists every person and every problem, in a written report you can keep.</p>
+              <a class="buy-btn" href="https://buy.stripe.com/7sY8wH7et1i92e09PO24000">Order now</a>
+            </div>
+          </div>
+
           <div class="root-divider root-divider-legal" aria-hidden="true"><span class="root-divider-motif"><svg width="104" height="52" viewBox="0 0 104 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke-linecap="round" fill="none"><path class="rb-rust" d="M52 26 V14" stroke-width="1.6"/><path class="rb-olive" d="M52 18 C46 15 40 13 34 7" stroke-width="1.4"/><path class="rb-olive" d="M52 18 C58 15 64 13 70 7" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C45 20 38 18 31 13" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C59 20 66 18 73 13" stroke-width="1.4"/><path class="rb-olive" d="M52 14 C50 10 47 7 43 4" stroke-width="1.3"/><path class="rb-olive" d="M52 14 C54 10 57 7 61 4" stroke-width="1.3"/><path class="rb-rust" d="M52 26 V38" stroke-width="1.6"/><path class="rb-olive" d="M52 30 C45 32 38 34 31 39" stroke-width="1.3"/><path class="rb-olive" d="M52 30 C59 32 66 34 73 39" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C46 37 40 39 34 45" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C58 37 64 39 70 45" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C50 42 47 45 43 48" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C54 42 57 45 61 48" stroke-width="1.3"/></g><circle class="rb-dot-rust" cx="34" cy="7" r="1.9"/><circle class="rb-dot-olive" cx="70" cy="7" r="1.9"/><circle class="rb-dot-gold" cx="31" cy="13" r="1.6"/><circle class="rb-dot-gold" cx="73" cy="13" r="1.6"/><circle class="rb-dot-olive" cx="43" cy="4" r="1.6"/><circle class="rb-dot-rust" cx="61" cy="4" r="1.6"/></svg></span></div>
 
           <div class="viewer-cta">
@@ -1626,6 +1671,11 @@
         var detailEl = document.getElementById("viewer-detail");
         var pedEl = document.getElementById("viewer-pedigree");
         var startOverBtn = document.getElementById("viewer-startover");
+        var scanBtn = document.getElementById("viewer-scan-btn");
+        var scanHint = document.getElementById("viewer-scan-hint");
+        var scanResults = document.getElementById("viewer-scan-results");
+        var scanList = document.getElementById("viewer-scan-list");
+        var scanAllClear = document.getElementById("viewer-scan-allclear");
 
         var people = {};
         var families = {};
@@ -1690,6 +1740,14 @@
               var deat = childNode(rec, "DEAT");
               var bDate = birt ? childVal(birt, "DATE") : "";
               var dDate = deat ? childVal(deat, "DATE") : "";
+              var hasSource = !!childNode(rec, "SOUR") ||
+                (birt ? !!childNode(birt, "SOUR") : false) ||
+                (deat ? !!childNode(deat, "SOUR") : false);
+              if (!hasSource) {
+                rec.children.forEach(function (ev) {
+                  if (childNode(ev, "SOUR")) hasSource = true;
+                });
+              }
               ppl[rec.xref] = {
                 id: rec.xref,
                 name: cleanName(nameRaw) || "Unknown name",
@@ -1701,6 +1759,7 @@
                 deathPlace: deat ? childVal(deat, "PLAC") : "",
                 birthYear: yearOf(bDate),
                 deathYear: yearOf(dDate),
+                hasSource: hasSource,
                 famc: childVal(rec, "FAMC"),
                 fams: childVals(rec, "FAMS")
               };
@@ -1984,6 +2043,116 @@
           }
         }
 
+        /* ---------- Free scan (types only — never counts, names, or examples) ---------- */
+
+        function resetScan() {
+          if (scanHint) scanHint.hidden = true;
+          if (scanResults) scanResults.hidden = true;
+          if (scanList) scanList.textContent = "";
+          if (scanAllClear) scanAllClear.hidden = true;
+        }
+
+        function runScan() {
+          if (!sortedIds.length) {
+            if (scanResults) scanResults.hidden = true;
+            if (scanHint) scanHint.hidden = false;
+            return;
+          }
+          if (scanHint) scanHint.hidden = true;
+
+          var found = {
+            dates: false,
+            duplicates: false,
+            birth: false,
+            death: false,
+            sources: false,
+            parents: false
+          };
+          var currentYear = new Date().getFullYear();
+
+          function yearNum(v) {
+            var n = parseInt(v, 10);
+            return isNaN(n) ? null : n;
+          }
+
+          sortedIds.forEach(function (id) {
+            var p = people[id];
+            var b = yearNum(p.birthYear);
+            var d = yearNum(p.deathYear);
+
+            if (b !== null && d !== null) {
+              if (d < b) found.dates = true;
+              if (d - b > 110) found.dates = true;
+            }
+            if (!p.birthDate && !p.birthPlace) found.birth = true;
+            if (!p.deathDate && !p.deathPlace && b !== null && currentYear - b > 100) found.death = true;
+            if (!p.hasSource) found.sources = true;
+
+            var fa = fatherOf(p);
+            var mo = motherOf(p);
+            if (!fa && !mo) found.parents = true;
+
+            if (b !== null) {
+              [fa, mo].forEach(function (parentId, idx) {
+                if (!parentId || !people[parentId]) return;
+                var parent = people[parentId];
+                var pb = yearNum(parent.birthYear);
+                var pd = yearNum(parent.deathYear);
+                if (pb !== null) {
+                  var age = b - pb;
+                  if (age < 15) found.dates = true;
+                  if (idx === 1 && age > 55) found.dates = true;
+                  if (idx === 0 && age > 85) found.dates = true;
+                }
+                if (pd !== null) {
+                  if (idx === 1 && b > pd) found.dates = true;
+                  if (idx === 0 && b > pd + 1) found.dates = true;
+                }
+              });
+            }
+          });
+
+          var seenFull = {};
+          var seenLoose = {};
+          sortedIds.forEach(function (id) {
+            var p = people[id];
+            if (!p.birthYear) return;
+            var fullKey = p.name.toLowerCase().replace(/\s+/g, " ").trim() + "|" + p.birthYear;
+            if (seenFull[fullKey]) found.duplicates = true;
+            seenFull[fullKey] = true;
+            var first = p.name.split(" ")[0] || "";
+            var looseKey = (p.surname || "").toLowerCase() + "|" + first.toLowerCase() + "|" + p.birthYear;
+            if (first && seenLoose[looseKey]) found.duplicates = true;
+            seenLoose[looseKey] = true;
+          });
+
+          var types = [
+            ["Dates that can’t all be true", found.dates],
+            ["Possible duplicates", found.duplicates],
+            ["Missing birth details", found.birth],
+            ["Missing death details", found.death],
+            ["People with no sources", found.sources],
+            ["Lines that stop — no parents recorded", found.parents]
+          ];
+
+          scanList.textContent = "";
+          var anyFound = false;
+          types.forEach(function (t) {
+            if (t[1]) anyFound = true;
+            var li = document.createElement("li");
+            var label = document.createElement("span");
+            label.textContent = t[0];
+            var badge = document.createElement("span");
+            badge.className = "scan-badge " + (t[1] ? "found" : "clear");
+            badge.textContent = t[1] ? "Found" : "Clear";
+            li.appendChild(label);
+            li.appendChild(badge);
+            scanList.appendChild(li);
+          });
+          scanAllClear.hidden = anyFound;
+          scanResults.hidden = false;
+        }
+
         /* ---------- Loading a file ---------- */
 
         function showError(msg) {
@@ -2025,6 +2194,7 @@
               selectedId = sortedIds[0];
               startArea.hidden = true;
               appArea.hidden = false;
+              resetScan();
               renderList();
               renderDetail();
               renderPedigree();
@@ -2057,6 +2227,7 @@
           handleFile(f);
         });
         searchInput.addEventListener("input", renderList);
+        if (scanBtn) scanBtn.addEventListener("click", runScan);
         startOverBtn.addEventListener("click", function () {
           people = {};
           families = {};
@@ -2066,6 +2237,7 @@
           searchInput.value = "";
           errorBox.hidden = true;
           noteBox.hidden = true;
+          resetScan();
           appArea.hidden = true;
           startArea.hidden = false;
           listEl.textContent = "";
