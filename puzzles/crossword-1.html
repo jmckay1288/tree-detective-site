@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cline x1='39' y1='39' x2='57' y2='57' stroke='%23b5502a' stroke-width='9' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='26' r='19' fill='%23f4eee1' stroke='%23262019' stroke-width='5'/%3E%3Cpath d='M26 23v4M18 27h16M18 27v3M34 27v3' stroke='%235c6636' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='26' cy='18' r='4.5' fill='%23b5502a'/%3E%3Ccircle cx='18' cy='34' r='4' fill='%235c6636'/%3E%3Ccircle cx='34' cy='34' r='4' fill='%23a07d2c'/%3E%3C/svg%3E" />
+    <title>Genealogy Crossword № 1 — Genealogy Detective Service</title>
+    <meta name="description" content="Genealogy Crossword № 1: a free, fill-in crossword from Genealogy Detective Service — records, places, and people from the family historian's world. A new genealogy puzzle every Wednesday." />
+    <link rel="canonical" href="https://tree-detective.com/puzzles/crossword-1.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Genealogy Crossword № 1 — Genealogy Detective Service" />
+    <meta property="og:description" content="Genealogy Crossword № 1: a free, fill-in crossword from Genealogy Detective Service — records, places, and people from the family historian's world. A new genealogy puzzle every Wednesday." />
+    <meta property="og:url" content="https://tree-detective.com/puzzles/crossword-1.html" />
+    <meta property="og:image" content="https://tree-detective.com/og-image.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;0,6..72,900;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary { min-height: 2.25rem; }
+
+      :root {
+        --paper: #f4eee1;
+        --paper-2: #ece3cf;
+        --card: #fdfaf2;
+        --ink: #262019;
+        --ink-soft: #4c4436;
+        --rust: #b5502a;
+        --rust-dark: #96401f;
+        --line: #d8cbb0;
+        --cell: #fffdf6;
+        --cell-line: #8a7a5c;
+        --black-cell: #262019;
+        --word-hl: #f3e3bb;
+        --cell-hl: #ecd28f;
+        --good-bg: #dcebd2;
+        --good-ink: #2e5d23;
+        --bad-bg: #f6d9d2;
+        --bad-ink: #a02718;
+        --revealed-ink: #a63d2a;
+        --focus-ring: #a63d2a;
+        --ink-faint: #6f6450;
+        --olive: #5c6636;
+        --gold: #a07d2c;
+        --rust-deep: #96401f;
+        --shadow: 0 10px 30px rgba(59, 42, 20, .14);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #171310;
+          --paper-2: #1f1a15;
+          --card: #241d16;
+          --ink: #f0e6d2;
+          --ink-soft: #c4b294;
+          --rust: #e08a70;
+          --rust-dark: #e08a70;
+          --line: #4a3d2c;
+          --cell: #2e251b;
+          --cell-line: #77664c;
+          --black-cell: #0c0a08;
+          --word-hl: #4a3a1e;
+          --cell-hl: #6b5322;
+          --good-bg: #2c4423;
+          --good-ink: #bfe3ae;
+          --bad-bg: #5a2a20;
+          --bad-ink: #ffb4a3;
+          --revealed-ink: #e08a70;
+          --focus-ring: #e08a70;
+          --ink-faint: #a08d6d;
+          --shadow: 0 10px 30px rgba(0,0,0,.5);
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 56px; }
+
+      /* ---------- Puzzle head ---------- */
+      .puzzle-head { text-align: center; padding-top: 6px; }
+      h1 { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.08; margin: 0 0 10px; }
+      .intro { max-width: 680px; margin: 0 auto 4px; text-align: center; color: var(--ink-soft); font-size: 1.05rem; }
+      .intro strong { color: var(--ink); }
+      .howto { max-width: 680px; margin: 10px auto 0; text-align: center; color: var(--ink-soft); }
+      .howto strong { color: var(--ink); }
+
+      /* ---------- Toolbar ---------- */
+      .toolbar {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;
+        margin: 20px auto 6px; max-width: 900px;
+      }
+      .btn {
+        font-family: "Public Sans", system-ui, sans-serif; font-size: .95rem; font-weight: 600;
+        padding: 8px 16px; border-radius: 6px; cursor: pointer;
+        border: 1.5px solid var(--ink); background: var(--card); color: var(--ink);
+        transition: background .15s ease, color .15s ease, transform .1s ease;
+      }
+      .btn:hover { background: var(--paper-2); }
+      .btn:active { transform: translateY(1px); }
+      .btn:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+      .btn.primary { background: var(--rust); border-color: var(--rust-dark); color: #fff8ec; }
+      .btn.primary:hover { background: var(--rust-dark); }
+      @media (prefers-color-scheme: dark) { .btn.primary { color: #1d130c; } }
+      .stats { display: flex; gap: 18px; justify-content: center; align-items: baseline; margin: 10px 0 2px; font-size: .95rem; color: var(--ink-soft); flex-wrap: wrap; }
+      .stats b { color: var(--ink); font-variant-numeric: tabular-nums; }
+      .status { min-height: 1.6em; text-align: center; font-weight: 600; margin: 6px auto 0; max-width: 720px; }
+      .status.good { color: var(--good-ink); }
+      .status.bad { color: var(--bad-ink); }
+
+      .solved-banner {
+        display: none; max-width: 720px; margin: 18px auto 0; text-align: center;
+        background: var(--good-bg); color: var(--good-ink); border: 1.5px solid var(--good-ink);
+        border-radius: 8px; padding: 16px 20px;
+      }
+      .solved-banner.show { display: block; }
+      .solved-banner h2 { font-family: "Newsreader", Georgia, serif; margin: 0 0 4px; font-size: 1.5rem; }
+      .solved-banner p { margin: 0; }
+
+      /* ---------- Layout ---------- */
+      .play { display: flex; gap: 34px; align-items: flex-start; justify-content: center; margin-top: 22px; }
+      .grid-side { flex: 0 1 600px; min-width: 0; width: 100%; }
+      .clues-side { flex: 1 1 340px; min-width: 280px; max-width: 460px; }
+      @media (max-width: 920px) {
+        .play { flex-direction: column; align-items: center; }
+        .clues-side { max-width: 640px; width: 100%; }
+      }
+
+      /* ---------- Grid ---------- */
+      .grid-frame {
+        background: var(--card); border: 1.5px solid var(--line); border-radius: 10px;
+        padding: clamp(8px, 2vw, 16px); box-shadow: var(--shadow);
+      }
+      .grid {
+        display: grid; gap: 0; width: 100%;
+        grid-template-columns: repeat(13, 1fr);
+        border: 2.5px solid var(--black-cell);
+        background: var(--black-cell);
+        user-select: none; -webkit-user-select: none;
+      }
+      .cell { position: relative; aspect-ratio: 1 / 1; background: var(--black-cell); }
+      .cell.white { background: var(--cell); box-shadow: inset 0 0 0 1px var(--cell-line); }
+      .cell.in-word { background: var(--word-hl); }
+      .cell.active { background: var(--cell-hl); }
+      .cell .num {
+        position: absolute; top: 1px; left: 2.5px; font-size: clamp(7px, 1.6vw, 10.5px);
+        font-weight: 600; line-height: 1; color: var(--ink-soft); pointer-events: none; z-index: 2;
+        font-family: "Public Sans", system-ui, sans-serif;
+      }
+      .cell input {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        border: 0; background: transparent; text-align: center;
+        font-family: "Public Sans", system-ui, sans-serif; font-weight: 600;
+        font-size: clamp(13px, 3.4vw, 24px); color: var(--ink);
+        text-transform: uppercase; caret-color: var(--rust);
+        padding: 12% 0 0; margin: 0; border-radius: 0;
+        -webkit-appearance: none; appearance: none;
+      }
+      .cell input:focus { outline: 2.5px solid var(--focus-ring); outline-offset: -2.5px; }
+      .cell.correct { background: var(--good-bg); }
+      .cell.correct input { color: var(--good-ink); }
+      .cell.wrong { background: var(--bad-bg); }
+      .cell.wrong input { color: var(--bad-ink); }
+      .cell.revealed input { color: var(--revealed-ink); font-style: italic; }
+      .grid-caption { text-align: center; color: var(--ink-soft); font-size: .88rem; font-style: italic; margin: 10px 0 0; }
+
+      /* ---------- Clues ---------- */
+      .current-clue {
+        background: var(--word-hl); border: 1.5px solid var(--line); border-radius: 8px;
+        padding: 10px 14px; font-size: 1rem; margin-bottom: 18px; min-height: 3.2em;
+      }
+      .current-clue .cc-label { font-family: "Public Sans", sans-serif; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 2px; }
+      .clues-side h2 {
+        font-family: "Newsreader", Georgia, serif; font-size: 1.35rem; margin: 0 0 8px;
+        border-bottom: 2px solid var(--line); padding-bottom: 6px;
+      }
+      .clues-side h2.down-head { margin-top: 24px; }
+      ol.clues { list-style: none; margin: 0; padding: 0; }
+      ol.clues li { margin: 0; }
+      ol.clues button {
+        display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+        font-family: "Public Sans", system-ui, sans-serif; font-size: .98rem; line-height: 1.45; color: var(--ink);
+        padding: 8px 10px; border-radius: 6px; min-height: 2.5rem;
+      }
+      ol.clues button:hover { background: var(--paper-2); }
+      ol.clues button:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 1px; }
+      ol.clues button.current { background: var(--word-hl); box-shadow: inset 3px 0 0 var(--rust); }
+      ol.clues .n { font-weight: 700; margin-right: .45em; }
+      ol.clues .len { color: var(--ink-soft); font-size: .88em; }
+      ol.clues button.done { color: var(--ink-soft); }
+      ol.clues button.done .clue-text { text-decoration: line-through; text-decoration-thickness: 1px; }
+
+      /* ---------- Footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 46px; padding: 22px 0 36px; color: var(--ink-faint); font-size: 15px; }
+      footer a { color: var(--ink-soft); }
+      footer p { color: var(--ink-faint); margin: 0 0 8px; }
+
+      @media print {
+        .toolbar, .stats, .current-clue { display: none; }
+        body { background: #fff; }
+      }
+
+      /* ---------- Site chrome (as on the guide pages) ---------- */
+      .site-header { border-bottom: 2px solid var(--ink); padding: 16px 0; }
+      .site-header .wrap, footer .wrap { padding-top: 0; padding-bottom: 0; }
+      .brand {
+        font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 22px;
+        color: var(--ink); text-decoration: none; line-height: 1.1;
+      }
+      .brand small {
+        display: block; font-family: "Public Sans", sans-serif; font-weight: 600;
+        font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ink-faint); margin-top: 3px;
+      }
+      .cta {
+        background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--rust);
+        padding: 24px 26px; margin: 38px 0 8px; box-shadow: 0 14px 30px rgba(38, 32, 25, 0.10);
+      }
+      .cta h2 { font-family: "Newsreader", Georgia, serif; font-weight: 700; font-size: 24px; line-height: 1.2; margin: 0 0 10px; }
+      .cta p { margin: 0 0 16px; color: var(--ink-soft); }
+      .cta p strong { color: var(--ink); }
+      .cta p:last-child { margin-bottom: 0; }
+      .cta .btn {
+        display: inline-block; background: var(--rust); color: #fff; text-decoration: none;
+        font-family: "Public Sans", sans-serif; font-size: 1rem; font-weight: 700;
+        padding: 12px 22px; border-radius: 6px; margin: 4px 10px 8px 0;
+      }
+      .cta .btn:hover { background: var(--rust-deep); }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="https://tree-detective.com/">Genealogy Detective Service<small>Family Tree Research Services</small></a>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="puzzle-head">
+        <h1>Genealogy Crossword № 1</h1>
+        <p class="intro"><strong>Crossword № 1</strong> — a new genealogy puzzle every Wednesday; last week's answers are in Wednesday's puzzle letter.</p>
+        <p class="howto">Every word hides in a family historian's world — the records, places, and people we chase. <strong>Tap a square and type</strong> to fill it in; tap a clue to jump to its word. Stuck? Reveal a letter. Puzzles alternate weekly between crossword and word search.</p>
+      </div>
+
+      <div class="toolbar" role="group" aria-label="Puzzle tools">
+        <button class="btn primary" id="btn-check" type="button">Check answers</button>
+        <button class="btn" id="btn-letter" type="button">Reveal letter</button>
+        <button class="btn" id="btn-word" type="button">Reveal word</button>
+        <button class="btn" id="btn-solve" type="button">Solve puzzle</button>
+        <button class="btn" id="btn-clear" type="button">Clear grid</button>
+      </div>
+      <div class="stats">
+        <span>Filled: <b id="stat-filled">0 / 75</b></span>
+        <span>Time: <b id="stat-time">0:00</b></span>
+      </div>
+      <p class="status" id="status" aria-live="polite"></p>
+
+      <div class="solved-banner" id="solved-banner" role="status">
+        <h2>Case closed — puzzle solved!</h2>
+        <p id="solved-detail">Every square is correct. Nicely done, detective.</p>
+      </div>
+
+      <div class="play">
+        <section class="grid-side" aria-label="Crossword grid">
+          <div class="grid-frame">
+            <div class="grid" id="grid"></div>
+          </div>
+          <p class="grid-caption">Tap a square, then type. Tap the square again (or press Space) to switch between Across and Down.</p>
+        </section>
+
+        <section class="clues-side" aria-label="Clues">
+          <div class="current-clue" id="current-clue">
+            <span class="cc-label">Now solving</span>
+            <span id="current-clue-text">Pick a square or a clue to begin.</span>
+          </div>
+          <h2>Across</h2>
+          <ol class="clues" id="clues-across"></ol>
+          <h2 class="down-head">Down</h2>
+          <ol class="clues" id="clues-down"></ol>
+        </section>
+      </div>
+
+      <div class="cta">
+        <h2>Never miss a Wednesday puzzle</h2>
+        <p>Join the <strong>free membership</strong> for the weekly puzzle letter — a new genealogy puzzle every Wednesday, with last week's answers. Members also get a free sample scan of their family tree, and returning customers save 20% on every order after their first.</p>
+        <p><a class="btn" href="https://tree-detective.com/#members">Join the free membership</a></p>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <p><a href="https://tree-detective.com/">Genealogy Detective Service</a> — family tree research, honestly labeled.</p>
+        <p><a href="https://tree-detective.com/">Home</a> · <a href="https://tree-detective.com/#privacy">Privacy &amp; Legal</a> · <a href="mailto:admin@tree-detective.com">admin@tree-detective.com</a></p>
+      </div>
+    </footer>
+
+    <script>
+      // Word placements: [answer, startRow, startCol, direction]
+      var PLACEMENTS = [
+        ["TREE",       0, 0,  "A"],
+        ["TWIN",       0, 0,  "D"],
+        ["ENUMERATOR", 0, 2,  "D"],
+        ["VITAL",      3, 4,  "D"],
+        ["PEDIGREE",   4, 1,  "A"],
+        ["HINT",       5, 9,  "D"],
+        ["PLAT",       8, 6,  "A"],
+        ["PATERNAL",   9, 5,  "D"],
+        ["AUNT",       10, 5, "A"],
+        ["DOWER",      12, 2, "A"],
+        ["ORPHAN",     12, 3, "D"],
+        ["AGE",        15, 5, "A"],
+        ["DEED",       16, 8, "D"],
+        ["HEIR",       18, 12,"D"],
+        ["SOUNDEX",    19, 4, "A"],
+        ["LEDGER",     21, 7, "A"]
+      ];
+      var CLUES = {
+        "1A":  "It has roots and branches, but no leaves to rake",
+        "4A":  "Diagram showing a family's generations",
+        "6A":  "It shows where the old homestead stood",
+        "8A":  "Your parent's sister",
+        "9A":  "A widow's legal share of her husband's estate",
+        "11A": "Number the census asked of everyone",
+        "14A": "Phonetic code once used to index census surnames",
+        "15A": "Old handwritten account book, a courthouse treasure",
+        "1D":  "One of two children born at the same birth",
+        "2D":  "Census taker who went door to door",
+        "3D":  "As in ___ records: births, marriages, and deaths",
+        "5D":  "Leafy suggestion offered by a family-tree website",
+        "7D":  "On the father's side of the family",
+        "10D": "Child whose parents have both died",
+        "12D": "Document that transfers ownership of land",
+        "13D": "One who inherits property"
+      };
+      var ROWS = 22, COLS = 13;
+
+      // Build solution map and word objects
+      var solution = {}; // "r,c" -> letter
+      var words = [];
+      PLACEMENTS.forEach(function (p) {
+        var w = { answer: p[0], row: p[1], col: p[2], dir: p[3], cells: [] };
+        for (var i = 0; i < p[0].length; i++) {
+          var r = p[1] + (p[3] === "D" ? i : 0);
+          var c = p[2] + (p[3] === "A" ? i : 0);
+          solution[r + "," + c] = p[0][i];
+          w.cells.push(r + "," + c);
+        }
+        words.push(w);
+      });
+      // Standard crossword numbering, scanned row by row
+      var numAt = {}, counter = 0;
+      words.forEach(function () {});
+      (function assignNumbers() {
+        var starts = {};
+        words.forEach(function (w) { starts[w.row + "," + w.col] = true; });
+        var seen = {};
+        for (var r = 0; r < ROWS; r++) {
+          for (var c = 0; c < COLS; c++) {
+            var k = r + "," + c;
+            if (starts[k] && !seen[k]) { counter++; numAt[k] = counter; seen[k] = true; }
+          }
+        }
+        words.forEach(function (w) {
+          w.number = numAt[w.row + "," + w.col];
+          w.id = w.number + w.dir;
+          w.clue = CLUES[w.id];
+        });
+      })();
+
+      // Which words pass through each cell
+      var cellWords = {}; // key -> {A: word|null, D: word|null}
+      Object.keys(solution).forEach(function (k) { cellWords[k] = { A: null, D: null }; });
+      words.forEach(function (w) {
+        w.cells.forEach(function (k) { cellWords[k][w.dir] = w; });
+      });
+      var totalCells = Object.keys(solution).length;
+
+      // ---------- Build DOM ----------
+      var gridEl = document.getElementById("grid");
+      var inputs = {}; // key -> input element
+      var cellEls = {}; // key -> cell div
+      for (var r = 0; r < ROWS; r++) {
+        for (var c = 0; c < COLS; c++) {
+          var key = r + "," + c;
+          var div = document.createElement("div");
+          div.className = "cell";
+          if (solution[key]) {
+            div.classList.add("white");
+            if (numAt[key]) {
+              var num = document.createElement("span");
+              num.className = "num";
+              num.textContent = numAt[key];
+              div.appendChild(num);
+            }
+            var inp = document.createElement("input");
+            inp.type = "text";
+            inp.maxLength = 1;
+            inp.autocomplete = "off";
+            inp.setAttribute("autocapitalize", "characters");
+            inp.setAttribute("spellcheck", "false");
+            inp.dataset.key = key;
+            var cw = cellWords[key];
+            var labelParts = [];
+            if (cw.A) labelParts.push(cw.A.number + " Across");
+            if (cw.D) labelParts.push(cw.D.number + " Down");
+            inp.setAttribute("aria-label", "Square " + labelParts.join(" and ") + ", row " + (r + 1) + ", column " + (c + 1));
+            div.appendChild(inp);
+            inputs[key] = inp;
+            cellEls[key] = div;
+          }
+          gridEl.appendChild(div);
+        }
+      }
+
+      // Clue lists
+      var clueButtons = {}; // word id -> button
+      function buildClues(dir, containerId) {
+        var ol = document.getElementById(containerId);
+        words.filter(function (w) { return w.dir === dir; })
+          .sort(function (a, b) { return a.number - b.number; })
+          .forEach(function (w) {
+            var li = document.createElement("li");
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.innerHTML = '<span class="n">' + w.number + '.</span><span class="clue-text"></span> <span class="len">(' + w.answer.length + ')</span>';
+            btn.querySelector(".clue-text").textContent = w.clue;
+            btn.addEventListener("click", function () { selectWord(w, true); });
+            li.appendChild(btn);
+            ol.appendChild(li);
+            clueButtons[w.id] = btn;
+          });
+      }
+      buildClues("A", "clues-across");
+      buildClues("D", "clues-down");
+
+      // ---------- State ----------
+      var currentKey = null;   // "r,c"
+      var currentDir = "A";
+      var revealed = {};       // key -> true
+      var timerStarted = false, timerDone = false, seconds = 0, timerId = null;
+
+      function keyRC(key) { var p = key.split(","); return [parseInt(p[0], 10), parseInt(p[1], 10)]; }
+      function currentWord() {
+        if (!currentKey) return null;
+        var cw = cellWords[currentKey];
+        return cw[currentDir] || cw.A || cw.D;
+      }
+      function setStatus(msg, kind) {
+        var s = document.getElementById("status");
+        s.textContent = msg || "";
+        s.className = "status" + (kind ? " " + kind : "");
+      }
+
+      function startTimer() {
+        if (timerStarted) return;
+        timerStarted = true;
+        timerId = setInterval(function () {
+          seconds++;
+          var m = Math.floor(seconds / 60), ss = seconds % 60;
+          document.getElementById("stat-time").textContent = m + ":" + (ss < 10 ? "0" : "") + ss;
+        }, 1000);
+      }
+      function stopTimer() {
+        timerDone = true;
+        if (timerId) clearInterval(timerId);
+      }
+
+      function refreshHighlights() {
+        Object.keys(cellEls).forEach(function (k) {
+          cellEls[k].classList.remove("in-word", "active");
+        });
+        var w = currentWord();
+        Object.keys(clueButtons).forEach(function (id) { clueButtons[id].classList.remove("current"); });
+        if (w) {
+          w.cells.forEach(function (k) { cellEls[k].classList.add("in-word"); });
+          if (clueButtons[w.id]) clueButtons[w.id].classList.add("current");
+          document.getElementById("current-clue-text").textContent =
+            w.number + " " + (w.dir === "A" ? "Across" : "Down") + " — " + w.clue + " (" + w.answer.length + ")";
+        }
+        if (currentKey && cellEls[currentKey]) cellEls[currentKey].classList.add("active");
+        // Mark completed words in the clue lists
+        words.forEach(function (wd) {
+          var btn = clueButtons[wd.id];
+          if (!btn) return;
+          var done = wd.cells.every(function (k) {
+            return inputs[k].value.toUpperCase() === solution[k];
+          });
+          btn.classList.toggle("done", done);
+        });
+      }
+
+      function updateProgress() {
+        var filled = 0;
+        Object.keys(inputs).forEach(function (k) { if (inputs[k].value) filled++; });
+        document.getElementById("stat-filled").textContent = filled + " / " + totalCells;
+      }
+
+      function checkSolved() {
+        var all = Object.keys(inputs).every(function (k) {
+          return inputs[k].value.toUpperCase() === solution[k];
+        });
+        var banner = document.getElementById("solved-banner");
+        if (all) {
+          if (!timerDone) {
+            stopTimer();
+            var t = document.getElementById("stat-time").textContent;
+            document.getElementById("solved-detail").textContent =
+              "Every square is correct — finished in " + t + ". Nicely done, detective. A new puzzle lands Wednesday.";
+          }
+          banner.classList.add("show");
+        } else {
+          banner.classList.remove("show");
+        }
+        return all;
+      }
+
+      function afterChange() {
+        updateProgress();
+        refreshHighlights();
+        checkSolved();
+      }
+
+      function selectCell(key, dir, focus) {
+        if (!inputs[key]) return;
+        currentKey = key;
+        var cw = cellWords[key];
+        if (dir && cw[dir]) currentDir = dir;
+        else if (!cw[currentDir]) currentDir = cw.A ? "A" : "D";
+        refreshHighlights();
+        if (focus) inputs[key].focus();
+      }
+      function selectWord(w, focus) {
+        currentDir = w.dir;
+        selectCell(w.cells[0], w.dir, focus);
+      }
+
+      function moveWithin(key, dir, delta) {
+        var w = cellWords[key] && cellWords[key][dir];
+        if (!w) return null;
+        var idx = w.cells.indexOf(key);
+        var nIdx = idx + delta;
+        if (nIdx < 0 || nIdx >= w.cells.length) return null;
+        return w.cells[nIdx];
+      }
+
+      // ---------- Input handling ----------
+      Object.keys(inputs).forEach(function (key) {
+        var inp = inputs[key];
+        inp.addEventListener("focus", function () {
+          if (currentKey !== key) selectCell(key, null, false);
+          // Select existing letter so typing replaces it
+          setTimeout(function () { try { inp.select(); } catch (e) {} }, 0);
+        });
+        inp.addEventListener("click", function () {
+          if (currentKey === key) {
+            var cw = cellWords[key];
+            if (cw.A && cw.D) {
+              currentDir = currentDir === "A" ? "D" : "A";
+              refreshHighlights();
+            }
+          } else {
+            selectCell(key, null, false);
+          }
+        });
+        inp.addEventListener("input", function () {
+          var v = inp.value.toUpperCase().replace(/[^A-Z]/g, "");
+          inp.value = v ? v[v.length - 1] : "";
+          cellEls[key].classList.remove("correct", "wrong");
+          if (inp.value) {
+            delete revealed[key];
+            cellEls[key].classList.remove("revealed");
+            startTimer();
+            var nxt = moveWithin(key, currentDir, 1);
+            afterChange();
+            if (nxt) selectCell(nxt, currentDir, true);
+          } else {
+            afterChange();
+          }
+        });
+        inp.addEventListener("keydown", function (ev) {
+          var rc = keyRC(key), r = rc[0], c = rc[1];
+          function go(nr, nc, dir) {
+            var nk = nr + "," + nc;
+            if (inputs[nk]) { ev.preventDefault(); selectCell(nk, dir, true); }
+          }
+          switch (ev.key) {
+            case "ArrowLeft":  go(r, c - 1, "A"); break;
+            case "ArrowRight": go(r, c + 1, "A"); break;
+            case "ArrowUp":    go(r - 1, c, "D"); break;
+            case "ArrowDown":  go(r + 1, c, "D"); break;
+            case " ":
+              ev.preventDefault();
+              var cw = cellWords[key];
+              if (cw.A && cw.D) { currentDir = currentDir === "A" ? "D" : "A"; refreshHighlights(); }
+              break;
+            case "Backspace":
+              ev.preventDefault();
+              if (inp.value) {
+                inp.value = "";
+                delete revealed[key];
+                cellEls[key].classList.remove("correct", "wrong", "revealed");
+                afterChange();
+              } else {
+                var prev = moveWithin(key, currentDir, -1);
+                if (prev) {
+                  selectCell(prev, currentDir, true);
+                  inputs[prev].value = "";
+                  delete revealed[prev];
+                  cellEls[prev].classList.remove("correct", "wrong", "revealed");
+                  afterChange();
+                }
+              }
+              break;
+            case "Delete":
+              inp.value = "";
+              delete revealed[key];
+              cellEls[key].classList.remove("correct", "wrong", "revealed");
+              afterChange();
+              break;
+            case "Tab":
+              ev.preventDefault();
+              var list = words.slice().sort(function (a, b) {
+                return (a.row - b.row) || (a.col - b.col) || (a.dir < b.dir ? -1 : 1);
+              });
+              var cur = currentWord();
+              var idx = cur ? list.indexOf(cur) : -1;
+              var next = list[(idx + (ev.shiftKey ? -1 : 1) + list.length) % list.length];
+              selectWord(next, true);
+              break;
+          }
+        });
+      });
+
+      // ---------- Toolbar ----------
+      document.getElementById("btn-check").addEventListener("click", function () {
+        var filledCount = 0, right = 0, wrong = 0;
+        Object.keys(inputs).forEach(function (k) {
+          var v = inputs[k].value.toUpperCase();
+          cellEls[k].classList.remove("correct", "wrong");
+          if (!v) return;
+          filledCount++;
+          if (v === solution[k]) { right++; cellEls[k].classList.add("correct"); }
+          else { wrong++; cellEls[k].classList.add("wrong"); }
+        });
+        if (filledCount === 0) setStatus("Nothing to check yet — fill in a few squares first.");
+        else if (wrong === 0 && filledCount === totalCells) setStatus("Perfect — every letter checks out!", "good");
+        else if (wrong === 0) setStatus("So far, so good: all " + right + " filled letters are correct. " + (totalCells - filledCount) + " squares to go.", "good");
+        else setStatus(right + " correct, " + wrong + (wrong === 1 ? " letter needs" : " letters need") + " another look (marked in red).", "bad");
+        refreshHighlights();
+        checkSolved();
+      });
+
+      function revealKey(k) {
+        inputs[k].value = solution[k];
+        revealed[k] = true;
+        cellEls[k].classList.remove("correct", "wrong");
+        cellEls[k].classList.add("revealed");
+      }
+      document.getElementById("btn-letter").addEventListener("click", function () {
+        if (!currentKey) { setStatus("Tap a square first, then reveal its letter."); return; }
+        startTimer();
+        revealKey(currentKey);
+        setStatus("Revealed the letter at " + currentWord().number + " " + (currentDir === "A" ? "Across" : "Down") + ".");
+        var nxt = moveWithin(currentKey, currentDir, 1);
+        afterChange();
+        if (nxt) selectCell(nxt, currentDir, true); else inputs[currentKey].focus();
+      });
+      document.getElementById("btn-word").addEventListener("click", function () {
+        var w = currentWord();
+        if (!w) { setStatus("Tap a square first, then reveal its word."); return; }
+        startTimer();
+        w.cells.forEach(revealKey);
+        setStatus("Revealed " + w.number + " " + (w.dir === "A" ? "Across" : "Down") + ": " + w.answer + ".");
+        afterChange();
+        inputs[currentKey].focus();
+      });
+      document.getElementById("btn-solve").addEventListener("click", function () {
+        startTimer();
+        Object.keys(inputs).forEach(revealKey);
+        setStatus("Full solution shown. The answers return in next Wednesday's issue, too.");
+        afterChange();
+      });
+      document.getElementById("btn-clear").addEventListener("click", function () {
+        Object.keys(inputs).forEach(function (k) {
+          inputs[k].value = "";
+          cellEls[k].classList.remove("correct", "wrong", "revealed");
+        });
+        revealed = {};
+        document.getElementById("solved-banner").classList.remove("show");
+        setStatus("Grid cleared — fresh start.");
+        afterChange();
+      });
+
+      // Start on 1 Across
+      selectWord(words.filter(function (w) { return w.id === "1A"; })[0], false);
+      updateProgress();
+    </script>
+  </body>
+</html>
