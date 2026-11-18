@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Genealogy Word Search № 1 — Genealogy Detective Service</title>
+<meta name="description" content="Genealogy Word Search № 1: a free, playable word search from Genealogy Detective Service — 15 genealogy words hidden in the grid. A new genealogy puzzle every Wednesday." />
+<link rel="canonical" href="https://tree-detective.com/puzzles/wordsearch-1.html" />
+<style>
+  :root{--paper:#f4eee1;--card:#fdfaf2;--ink:#262019;--ink-soft:#4c4436;--rust:#b5502a;--line:#d8cbb0;--cell:#fffdf6;--cell-line:#8a7a5c;--hl:#ecd28f;--found:#dcebd2;--found-ink:#2e5d23;--olive:#5c6636}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif}
+  main{max-width:980px;margin:0 auto;padding:24px 16px 48px}
+  h1{font-family:Georgia,serif;font-size:clamp(26px,5vw,40px);margin:8px 0 4px}
+  .sub{color:var(--ink-soft);margin:0 0 18px}
+  .wrap{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start}
+  @media(max-width:760px){.wrap{grid-template-columns:1fr}}
+  #grid{display:grid;grid-template-columns:repeat(14,1fr);gap:2px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;touch-action:none;user-select:none;-webkit-user-select:none}
+  .cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--cell);border:1px solid var(--cell-line);border-radius:4px;font-weight:700;font-size:clamp(12px,2.6vw,20px);cursor:pointer}
+  .cell.sel{background:var(--hl)}
+  .cell.found{background:var(--found);color:var(--found-ink)}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+  .panel h2{margin:0 0 6px;font-size:18px}
+  #progress{color:var(--olive);font-weight:700}
+  ul{list-style:none;margin:10px 0 0;padding:0}
+  li{padding:7px 0;border-bottom:1px solid var(--line)}
+  li span{display:block;color:var(--ink-soft);font-size:13px}
+  li.done strong{text-decoration:line-through;color:var(--found-ink)}
+  button{background:var(--rust);color:#fff;border:0;border-radius:8px;padding:10px 16px;font-weight:700;cursor:pointer;min-height:2.25rem}
+  #win{display:none;background:var(--found);border-radius:10px;padding:14px;margin-top:16px;font-weight:700}
+  a{color:var(--rust)}
+</style>
+</head>
+<body>
+<main>
+  <p><a href="https://tree-detective.com/">&larr; Genealogy Detective Service</a></p>
+  <h1>Wednesday Word Search № 1</h1>
+  <p class="sub">15 genealogy words are hiding in the grid — across, down, and diagonally, forwards and backwards. Drag (or tap the first and last letter) across a word to mark it. Wednesday, November 18, 2026.</p>
+  <div class="wrap">
+    <div>
+      <div id="grid" aria-label="Word search grid"></div>
+      <div id="win">You found all 15 words — nicely hunted! See you next Wednesday for a crossword. In the meantime: the Family Tree Error Check starts from $25 and Start Your Family Tree is $25, both at <a href="https://tree-detective.com/">tree-detective.com</a>.</div>
+    </div>
+    <div class="panel">
+      <h2>Find these words</h2>
+      <div id="progress">0 of 15 found</div>
+      <ul>
+        <li data-word="COURTHOUSE"><strong>COURTHOUSE</strong><span>County building full of old record books</span></li>
+        <li data-word="DATABASE"><strong>DATABASE</strong><span>Searchable collection of records online</span></li>
+        <li data-word="DESCENDANT"><strong>DESCENDANT</strong><span>A child, grandchild, or later offspring of an ancestor</span></li>
+        <li data-word="DRAFTCARD"><strong>DRAFTCARD</strong><span>World War registration form filled out by millions of men</span></li>
+        <li data-word="ENUMERATOR"><strong>ENUMERATOR</strong><span>Census taker who went door to door</span></li>
+        <li data-word="GENERATION"><strong>GENERATION</strong><span>Parents, children, and grandchildren are each one of these</span></li>
+        <li data-word="GRAVESTONE"><strong>GRAVESTONE</strong><span>Marker that may give an ancestor&#x27;s birth and death dates</span></li>
+        <li data-word="IMMIGRANT"><strong>IMMIGRANT</strong><span>Ancestor who arrived to settle in a new country</span></li>
+        <li data-word="MANIFEST"><strong>MANIFEST</strong><span>A ship&#x27;s official list of its passengers</span></li>
+        <li data-word="MARRIAGE"><strong>MARRIAGE</strong><span>Union that often produced both a license and a certificate</span></li>
+        <li data-word="NATURALIZE"><strong>NATURALIZE</strong><span>Become a citizen, as many immigrants did</span></li>
+        <li data-word="OCCUPATION"><strong>OCCUPATION</strong><span>Job listed for an ancestor in the census</span></li>
+        <li data-word="PASSENGER"><strong>PASSENGER</strong><span>Person listed on a ship&#x27;s manifest</span></li>
+        <li data-word="SCHEDULE"><strong>SCHEDULE</strong><span>Special census form, as for farms or industry</span></li>
+        <li data-word="TRANSCRIBE"><strong>TRANSCRIBE</strong><span>Copy a handwritten record out word for word</span></li>
+      </ul>
+      <p><button id="reset" type="button">Start over</button></p>
+    </div>
+  </div>
+</main>
+<script>
+const DATA = {"grid": ["OVGENUMERATORU", "KGFOOCCUPATION", "AGENERATIONUZN", "TENFGIMMIGRANT", "RNCDRPDATABASE", "AAOEAAMDRENEAD", "NTUSVSRARRAVRU", "SURCESCLNOIAYE", "CRTESEEHGICAOR", "RAHNTNROETFOGU", "ILODOGOEFDOETE", "BIUANETASIUMST", "EZSNERRSLOSLUT", "PEETEDQUTTIIEP"], "words": [{"answer": "COURTHOUSE", "clue": "County building full of old record books"}, {"answer": "DATABASE", "clue": "Searchable collection of records online"}, {"answer": "DESCENDANT", "clue": "A child, grandchild, or later offspring of an ancestor"}, {"answer": "DRAFTCARD", "clue": "World War registration form filled out by millions of men"}, {"answer": "ENUMERATOR", "clue": "Census taker who went door to door"}, {"answer": "GENERATION", "clue": "Parents, children, and grandchildren are each one of these"}, {"answer": "GRAVESTONE", "clue": "Marker that may give an ancestor's birth and death dates"}, {"answer": "IMMIGRANT", "clue": "Ancestor who arrived to settle in a new country"}, {"answer": "MANIFEST", "clue": "A ship's official list of its passengers"}, {"answer": "MARRIAGE", "clue": "Union that often produced both a license and a certificate"}, {"answer": "NATURALIZE", "clue": "Become a citizen, as many immigrants did"}, {"answer": "OCCUPATION", "clue": "Job listed for an ancestor in the census"}, {"answer": "PASSENGER", "clue": "Person listed on a ship's manifest"}, {"answer": "SCHEDULE", "clue": "Special census form, as for farms or industry"}, {"answer": "TRANSCRIBE", "clue": "Copy a handwritten record out word for word"}]};
+const gridEl = document.getElementById('grid');
+const cells = [];
+DATA.grid.forEach((row, r) => {
+  [...row].forEach((ch, c) => {
+    const d = document.createElement('div');
+    d.className = 'cell'; d.textContent = ch; d.dataset.r = r; d.dataset.c = c;
+    gridEl.appendChild(d); cells.push(d);
+  });
+});
+const SIZE = DATA.grid.length;
+const at = (r, c) => cells[r * SIZE + c];
+const found = new Set();
+let start = null, current = [];
+function line(a, b) {
+  const dr = Math.sign(b.r - a.r), dc = Math.sign(b.c - a.c);
+  const steps = Math.max(Math.abs(b.r - a.r), Math.abs(b.c - a.c));
+  if (!(a.r === b.r || a.c === b.c || Math.abs(b.r - a.r) === Math.abs(b.c - a.c))) return [];
+  const out = [];
+  for (let i = 0; i <= steps; i++) out.push({r: a.r + dr * i, c: a.c + dc * i});
+  return out;
+}
+function paint(list) {
+  cells.forEach(el => el.classList.remove('sel'));
+  list.forEach(p => at(p.r, p.c).classList.add('sel'));
+  current = list;
+}
+function tryWord(list) {
+  if (!list.length) return;
+  const s = list.map(p => DATA.grid[p.r][p.c]).join('');
+  const rev = [...s].reverse().join('');
+  const hit = DATA.words.find(w => w.answer === s || w.answer === rev);
+  if (hit && !found.has(hit.answer)) {
+    found.add(hit.answer);
+    list.forEach(p => at(p.r, p.c).classList.add('found'));
+    document.querySelector(`li[data-word="${hit.answer}"]`).classList.add('done');
+    document.getElementById('progress').textContent = `${found.size} of ${DATA.words.length} found`;
+    if (found.size === DATA.words.length) document.getElementById('win').style.display = 'block';
+  }
+}
+function posFromEvent(e) {
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+  if (!el || !el.classList.contains('cell')) return null;
+  return {r: +el.dataset.r, c: +el.dataset.c};
+}
+let dragging = false;
+gridEl.addEventListener('pointerdown', e => { const p = posFromEvent(e); if (!p) return; dragging = true; start = p; paint([p]); gridEl.setPointerCapture(e.pointerId); });
+gridEl.addEventListener('pointermove', e => { if (!dragging || !start) return; const p = posFromEvent(e); if (p) paint(line(start, p)); });
+gridEl.addEventListener('pointerup', () => { if (!dragging) return; dragging = false; tryWord(current); paint([]); start = null; });
+document.getElementById('reset').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
