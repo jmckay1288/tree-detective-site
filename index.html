@@ -141,6 +141,7 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
         background-repeat: repeat;
         background-size: 300px 300px;
+        box-shadow: 0 6px 18px rgba(38, 32, 25, 0.10);
         position: sticky;
         top: 0;
         z-index: 50;
@@ -748,6 +749,42 @@
         min-height: 44px; display: inline-flex; align-items: center;
       }
 
+      /* ---------- Service finder ---------- */
+      .finder { margin: 0 0 26px; }
+      .finder-label { font-family: "Newsreader", Georgia, serif; font-weight: 900; font-size: 20px; margin: 0 0 12px; }
+      .finder-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .finder-chip {
+        font-family: "Public Sans", sans-serif; font-size: 14.5px; font-weight: 600;
+        color: var(--ink); background: var(--card); border: 1.5px solid var(--line);
+        border-radius: 999px; padding: 9px 16px; min-height: 44px; cursor: pointer;
+      }
+      .finder-chip:hover { border-color: var(--rust); color: var(--rust-deep); }
+      .finder-chip.active { background: var(--rust); border-color: var(--rust); color: #fdfaf2; }
+      .finder-chip.active:hover { color: #fdfaf2; }
+      [data-finder-cat] {
+        scroll-margin-top: 100px;
+        outline: 2px solid transparent; outline-offset: 4px;
+        transition: opacity 0.3s ease, outline-color 0.3s ease;
+      }
+      body.finder-filtering [data-finder-cat] { opacity: 0.35; }
+      body.finder-filtering [data-finder-cat].finder-match { opacity: 1; outline-color: var(--rust); }
+
+      /* ---------- Back to top ---------- */
+      .back-to-top {
+        position: fixed; right: 20px; bottom: 20px; z-index: 60;
+        width: 48px; height: 48px; border-radius: 50%; border: none; cursor: pointer;
+        background: var(--rust); color: #f6efdc; font-size: 22px; line-height: 1;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 8px 20px rgba(38, 32, 25, 0.28);
+        transform: translateY(76px); pointer-events: none;
+        transition: transform 0.25s ease, background-color 0.2s ease;
+      }
+      .back-to-top:hover { background: var(--rust-deep); }
+      .back-to-top.visible { transform: translateY(0); pointer-events: auto; }
+      @media (prefers-reduced-motion: reduce) {
+        [data-finder-cat], .back-to-top { transition: none; }
+      }
+
       @media (max-width: 860px) {
         .service-cols { grid-template-columns: 1fr; gap: 34px; }
         .tier-grid { grid-template-columns: 1fr; }
@@ -791,7 +828,7 @@
         </div>
       </section>
 
-            <!-- ============ SERVICE: START YOUR FAMILY TREE (first on the page) ============ -->       <section class="start-tree" id="start-your-family-tree" aria-labelledby="start-tree-heading">         <div class="wrap">           <div class="start-tree-box">             <p class="kicker">Start here &middot; For beginners &middot; One-time payment</p>             <h2 id="start-tree-heading">Start Your Family Tree</h2>             <p class="lede">No tree yet? This is the place to begin. <strong>Tell us the basics you know &mdash; parents, grandparents, where they lived &mdash; and we build your tree back five generations from real records</strong>, following every line as far as the records allow. You get a written report plus a downloadable tree file you can keep growing.</p>             <p class="turnaround">Typical turnaround: 10–14 days</p>             <div class="start-tree-steps">               <div class="start-tree-step">                 <h3><span>1.</span> Share the basics you know</h3>                 <p>Parents, grandparents, birthplaces &mdash; <strong>whatever you have is enough to start</strong>. Fill in the <a href="#research-info">Research Information Sheet</a> on this page, before or after you order.</p>               </div>               <div class="start-tree-step">                 <h3><span>2.</span> We build from real records</h3>                 <p>Your tree is built <strong>back five generations</strong>, following every line as far as the records allow &mdash; and every finding is labeled by how well it&rsquo;s supported, so a guess never wears the clothes of a fact.</p>               </div>               <div class="start-tree-step">                 <h3><span>3.</span> Download and keep growing it</h3>                 <p>You get a <strong>written report plus a downloadable tree file (GEDCOM)</strong> you can keep, print, share, and import into your own tree software or site.</p>               </div>             </div>             <div class="start-tree-buy">               <div class="start-tree-price">                 $25                 <small>One-time price &mdash; no subscription.</small>               </div>               <div class="buy-action">                 <a class="buy-btn" href="https://buy.stripe.com/14AaEPfKZ0e5aKwbXW2400d">Order now &mdash; $25</a>                 <p class="buy-note">Open to customers worldwide &mdash; everything is sent and returned digitally as a downloadable file.</p>               </div>             </div>           </div>         </div>       </section>        <!-- ============ HOW IT WORKS — AUTOMATIC / NO SUBSCRIPTION / DOWNLOAD ============ -->
+            <!-- ============ SERVICE: START YOUR FAMILY TREE (first on the page) ============ -->       <section class="start-tree" id="start-your-family-tree" aria-labelledby="start-tree-heading">         <div class="wrap">           <div class="start-tree-box" data-finder-cat="build">             <p class="kicker">Start here &middot; For beginners &middot; One-time payment</p>             <h2 id="start-tree-heading">Start Your Family Tree</h2>             <p class="lede">No tree yet? This is the place to begin. <strong>Tell us the basics you know &mdash; parents, grandparents, where they lived &mdash; and we build your tree back five generations from real records</strong>, following every line as far as the records allow. You get a written report plus a downloadable tree file you can keep growing.</p>             <p class="turnaround">Typical turnaround: 10–14 days</p>             <div class="start-tree-steps">               <div class="start-tree-step">                 <h3><span>1.</span> Share the basics you know</h3>                 <p>Parents, grandparents, birthplaces &mdash; <strong>whatever you have is enough to start</strong>. Fill in the <a href="#research-info">Research Information Sheet</a> on this page, before or after you order.</p>               </div>               <div class="start-tree-step">                 <h3><span>2.</span> We build from real records</h3>                 <p>Your tree is built <strong>back five generations</strong>, following every line as far as the records allow &mdash; and every finding is labeled by how well it&rsquo;s supported, so a guess never wears the clothes of a fact.</p>               </div>               <div class="start-tree-step">                 <h3><span>3.</span> Download and keep growing it</h3>                 <p>You get a <strong>written report plus a downloadable tree file (GEDCOM)</strong> you can keep, print, share, and import into your own tree software or site.</p>               </div>             </div>             <div class="start-tree-buy">               <div class="start-tree-price">                 $25                 <small>One-time price &mdash; no subscription.</small>               </div>               <div class="buy-action">                 <a class="buy-btn" href="https://buy.stripe.com/14AaEPfKZ0e5aKwbXW2400d">Order now &mdash; $25</a>                 <p class="buy-note">Open to customers worldwide &mdash; everything is sent and returned digitally as a downloadable file.</p>               </div>             </div>           </div>         </div>       </section>        <!-- ============ HOW IT WORKS — AUTOMATIC / NO SUBSCRIPTION / DOWNLOAD ============ -->
       <section class="auto-model" id="automatic" aria-labelledby="automatic-heading">
         <div class="wrap">
           <div class="auto-box">
@@ -847,9 +884,20 @@
           <p class="lede">Focused research jobs, done one at a time and done properly. Each one is a standalone service in its own right &mdash; order any of them on its own, with no Error Check required and nothing you have to bundle it with. <strong>Every service is a one-time purchase &mdash; no monthly subscription</strong> &mdash; and your results come back as a <strong>downloadable file you can keep and use elsewhere</strong>.</p>
           <p class="loyalty-note"><strong>Returning customers save 20%</strong> on every service ordered after the first one, applied with a code at checkout.</p>
           <!-- Prices: change them in one place — SERVICE_PRICES in the script at the bottom of this page. -->
+                    <div class="finder" id="service-finder">
+            <p class="finder-label" id="finder-label">What are you looking for?</p>
+            <div class="finder-chips" role="group" aria-labelledby="finder-label">
+              <button type="button" class="finder-chip active" data-finder="all" aria-pressed="true">Show everything</button>
+              <button type="button" class="finder-chip" data-finder="record" aria-pressed="false">Look up one record</button>
+              <button type="button" class="finder-chip" data-finder="build" aria-pressed="false">Build or extend my tree</button>
+              <button type="button" class="finder-chip" data-finder="fix" aria-pressed="false">Fix or check my tree</button>
+              <button type="button" class="finder-chip" data-finder="book" aria-pressed="false">Books &amp; stories</button>
+              <button type="button" class="finder-chip" data-finder="tiers" aria-pressed="false">Packages &amp; tiers</button>
+            </div>
+          </div>
           <div class="service-grid">
             
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Record Lookup</h3>
                 <p>One specific record — a census page, a marriage entry, a draft card — found, transcribed, and explained, with the source cited so you can see it yourself.</p>
@@ -858,7 +906,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="recordLookup">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>One-Ancestor Report</h3>
                 <p>A fully sourced life report for one ancestor: birth, marriage, death, family, and work — every fact tied to its record, anything uncertain clearly labeled.</p>
@@ -867,7 +915,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="oneAncestor">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Obituary &amp; Newspaper Search</h3>
                 <p>We search newspaper archives for obituaries and stories about one ancestor and send you what we find with full citations — often the richest source of family detail there is.</p>
@@ -876,7 +924,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="newspaperSearch">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Vital Records Pack</h3>
                 <p>Birth, marriage, and death records for one person — the three records every tree needs — searched, transcribed, and cited.</p>
@@ -885,7 +933,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="vitalRecords">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Military Service Records</h3>
                 <p>Service, draft, and pension records for one ancestor, Civil War through WWII, gathered into one clear report of their service.</p>
@@ -894,7 +942,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="militaryRecords">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Wills &amp; Probate Search</h3>
                 <p>Wills and estate files for one ancestor. Probate records often name children, spouses, and property that appear nowhere else.</p>
@@ -903,7 +951,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="willsProbate">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Surname Origin Report</h3>
                 <p>Where your family name comes from, what it means, and where it first shows up in the records.</p>
@@ -912,7 +960,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="surnameOrigin">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Trace a Life</h3>
                 <p>One person followed decade by decade through every census and city directory we can find — where they lived, who was in the household, and how their life changed.</p>
@@ -921,7 +969,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="traceLife">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Cemetery Records Pack</h3>
                 <p>Burial records, cemetery plots, and headstone details for a family — who is buried where, and who rests beside them.</p>
@@ -930,7 +978,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="cemeteryRecords">$9.99</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="record">
               <div>
                 <h3>Old Record Translation</h3>
                 <p>Old church and civil records in German, Latin, and other languages, translated and explained in plain English.</p>
@@ -939,7 +987,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="recordTranslation">$25</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="book">
               <div>
                 <h3>Family Story Write-Up</h3>
                 <p>Your research turned into a readable family story you can share at a reunion or give as a gift, written from your records and our findings.</p>
@@ -948,7 +996,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="storyWriteUp">$39</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="build">
               <div>
                 <h3>DNA Match Helper</h3>
                 <p>Share your DNA match list and we identify your top matches and show how they fit your tree — turning mystery cousins into family.</p>
@@ -957,7 +1005,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="dnaMatchHelper">$39</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="build">
               <div>
                 <h3>Brick-Wall Breakthrough</h3>
                 <p>Stuck on an ancestor who seems to vanish? We attack the wall with fresh record sets and strategies, and report what we find — or exactly where the trail honestly ends.</p>
@@ -966,7 +1014,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="brickWall">$59</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="build">
               <div>
                 <h3>Lineage Extension</h3>
                 <p>We push one family line back as far as the records allow, adding sourced generations to your tree.</p>
@@ -975,7 +1023,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="lineageExtension">$59</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="build">
               <div>
                 <h3>Immigrant Origins Search</h3>
                 <p>We trace one immigrant ancestor back across the ocean — passenger lists, naturalization papers, and their hometown in the old country, where the records support it.</p>
@@ -984,7 +1032,7 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="immigrantOrigins">$59</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="build">
               <div>
                 <h3>Lineage Society Help</h3>
                 <p>Applying to the DAR, SAR, or Mayflower Society? We build the documentation pack — sourced proof for each generation your application needs.</p>
@@ -993,14 +1041,14 @@
               </div>
               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="lineageSociety">$79</span></div>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-finder-cat="book">
               <div>
                 <h3>Family History Book</h3>
                 <p>Your whole family history pulled together as a printable, book-style PDF — stories, records, and your tree — ready for gifts and reunions.</p>
                 <p class="turnaround">Typical turnaround: 3–4 weeks</p>                 <a class="buy-btn order-btn" href="https://buy.stripe.com/8x2eV542h2mddWId202400l">Order now — $99</a>
                 
               </div>
-              <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyHistoryBook">$99</span></div>             </div>             <div class="service-item">               <div>                 <h3>Tree Fix-Up</h3>                 <p>Your tree has grown messy — duplicate people, three spellings of the same town, dates that can't be right. Send us your tree file (GEDCOM) and we clean it up: merge duplicate people, standardize names, dates, and places, repair obvious date errors, and return a corrected, downloadable GEDCOM plus a short report of everything that was changed. Priced from $39 by tree size — larger trees get a quote before any work starts.</p>                 <p class="turnaround">Typical turnaround: 5–7 business days</p>                 <a class="buy-btn order-btn" href="https://buy.stripe.com/fZu5kveGVf8Z8Coe642400n">Order now — $39</a>               </div>               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="treeFixUp">$39</span></div>             </div>           </div>           <div class="promise">
+              <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="familyHistoryBook">$99</span></div>             </div>             <div class="service-item" data-finder-cat="fix">               <div>                 <h3>Tree Fix-Up</h3>                 <p>Your tree has grown messy — duplicate people, three spellings of the same town, dates that can't be right. Send us your tree file (GEDCOM) and we clean it up: merge duplicate people, standardize names, dates, and places, repair obvious date errors, and return a corrected, downloadable GEDCOM plus a short report of everything that was changed. Priced from $39 by tree size — larger trees get a quote before any work starts.</p>                 <p class="turnaround">Typical turnaround: 5–7 business days</p>                 <a class="buy-btn order-btn" href="https://buy.stripe.com/fZu5kveGVf8Z8Coe642400n">Order now — $39</a>               </div>               <div class="service-price"><span class="from">Starting at</span><span class="amount" data-price="treeFixUp">$39</span></div>             </div>           </div>           <div class="promise">
             <p><strong>The promise on every service:</strong> records actually read, not copied from someone else&rsquo;s tree &mdash; and when a trail runs cold, you get the honest dead end and what was searched, never a guess dressed up as an answer. Your downloadable file is yours to keep, with no subscription needed to access it later.</p>
             <div class="stamps" aria-label="Every finding is labeled Verified, Supported, Inference, or Conflict">
               <span class="stamp verified">Verified</span>
@@ -1014,7 +1062,7 @@
             <div class="root-divider" aria-hidden="true"><span class="root-divider-motif"><svg width="104" height="52" viewBox="0 0 104 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke-linecap="round" fill="none"><path class="rb-rust" d="M52 26 V14" stroke-width="1.6"/><path class="rb-olive" d="M52 18 C46 15 40 13 34 7" stroke-width="1.4"/><path class="rb-olive" d="M52 18 C58 15 64 13 70 7" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C45 20 38 18 31 13" stroke-width="1.4"/><path class="rb-olive" d="M52 22 C59 20 66 18 73 13" stroke-width="1.4"/><path class="rb-olive" d="M52 14 C50 10 47 7 43 4" stroke-width="1.3"/><path class="rb-olive" d="M52 14 C54 10 57 7 61 4" stroke-width="1.3"/><path class="rb-rust" d="M52 26 V38" stroke-width="1.6"/><path class="rb-olive" d="M52 30 C45 32 38 34 31 39" stroke-width="1.3"/><path class="rb-olive" d="M52 30 C59 32 66 34 73 39" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C46 37 40 39 34 45" stroke-width="1.3"/><path class="rb-olive" d="M52 34 C58 37 64 39 70 45" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C50 42 47 45 43 48" stroke-width="1.3"/><path class="rb-olive" d="M52 38 C54 42 57 45 61 48" stroke-width="1.3"/></g><circle class="rb-dot-rust" cx="34" cy="7" r="1.9"/><circle class="rb-dot-olive" cx="70" cy="7" r="1.9"/><circle class="rb-dot-gold" cx="31" cy="13" r="1.6"/><circle class="rb-dot-gold" cx="73" cy="13" r="1.6"/><circle class="rb-dot-olive" cx="43" cy="4" r="1.6"/><circle class="rb-dot-rust" cx="61" cy="4" r="1.6"/></svg></span></div>       <!-- ============ SERVICE: FAMILY TREE ERROR CHECK ============ -->
       <section class="service" id="error-check">
         <div class="wrap">
-          <div class="service-panel">
+          <div class="service-panel" data-finder-cat="fix">
             <div class="service-head">
               <div class="service-head-text">
                 <p class="kicker">Automatic service &middot; One-time payment &middot; No subscription</p>
@@ -1076,7 +1124,7 @@
           <h2>Genealogy Research Tiers</h2>
           <p class="lede">Totally automatic research, sized by your tree &mdash; <strong>no monthly subscription, just a one-time payment for the tier you pick</strong>. Every ancestor in the tier is checked against real records, and you get a <strong>downloadable report and tree file back by email</strong> to keep and use elsewhere. Returning customers save 20% on every tier ordered after the first one, applied with a code at checkout.</p>
           <div class="tier-grid">
-            <article class="tier-card">
+            <article class="tier-card" data-finder-cat="tiers">
               <h3 class="tier-name">Starter</h3>
               <p class="tier-cap">Up to 50 ancestors</p>
               <p class="tier-price">$25</p>               <p class="tier-price-note">One flat, one-time price for the whole tier &mdash; no subscription, no per-ancestor billing inside the cap.</p>               <p class="turnaround">Typical turnaround: 7–10 days</p>               <ul class="tier-includes">
@@ -1091,7 +1139,7 @@
                 <p class="buy-note">Open worldwide &mdash; send what you have and your downloadable file comes back by email.</p>
               </div>
             </article>
-            <article class="tier-card">
+            <article class="tier-card" data-finder-cat="tiers">
               <h3 class="tier-name">Standard</h3>
               <p class="tier-cap">Up to 100 ancestors</p>
               <p class="tier-price">$49</p>               <p class="tier-price-note">One flat, one-time price for the whole tier &mdash; no subscription, no per-ancestor billing inside the cap.</p>               <p class="turnaround">Typical turnaround: 10–14 days</p>               <ul class="tier-includes">
@@ -1106,7 +1154,7 @@
                 <p class="buy-note">Open worldwide &mdash; send what you have and your downloadable file comes back by email.</p>
               </div>
             </article>
-            <article class="tier-card">
+            <article class="tier-card" data-finder-cat="tiers">
               <h3 class="tier-name">Deep Dive</h3>
               <p class="tier-cap">Up to 300 ancestors</p>
               <p class="tier-price">$89</p>               <p class="tier-price-note">One flat, one-time price for the whole tier &mdash; no subscription, no per-ancestor billing inside the cap.</p>               <p class="turnaround">Typical turnaround: 2–3 weeks</p>               <ul class="tier-includes">
@@ -1121,7 +1169,7 @@
                 <p class="buy-note">Open worldwide &mdash; send what you have and your downloadable file comes back by email.</p>
               </div>
               
-            </article><article class="tier-card tier-card--platinum">
+            </article><article class="tier-card tier-card--platinum" data-finder-cat="tiers">
                 <h3 class="tier-name">Platinum Package</h3>
                 <p class="tier-cap">THE COMPLETE PACKAGE &mdash; RESEARCH, BOOK &amp; FIX-UP</p>
                 <p class="tier-price">$169</p>
@@ -1527,6 +1575,8 @@
         </nav>
       </div>
     </footer>
+
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">&#8593;</button>
 
     <script type="application/ld+json">
       {
@@ -2543,6 +2593,55 @@
             "mailto:admin@tree-detective.com" +
             "?subject=" + encodeURIComponent("Research Information Sheet — " + service) +
             "&body=" + encodeURIComponent(lines.join(String.fromCharCode(10)));
+        });
+      })();
+    </script>
+    <script>
+      // Navigation helpers: back-to-top button + service finder.
+      (function () {
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var scrollBehavior = reduceMotion ? "auto" : "smooth";
+
+        // Back to top: appears after ~600px of scrolling.
+        var toTop = document.getElementById("back-to-top");
+        if (toTop) {
+          var onScroll = function () {
+            toTop.classList.toggle("visible", window.scrollY > 600);
+          };
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+          toTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: scrollBehavior });
+          });
+        }
+
+        // Service finder: highlight matching blocks, dim the rest, never hide.
+        var chips = document.querySelectorAll(".finder-chip");
+        var blocks = document.querySelectorAll("[data-finder-cat]");
+        chips.forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            var key = chip.getAttribute("data-finder");
+            chips.forEach(function (c) {
+              var isActive = c === chip;
+              c.classList.toggle("active", isActive);
+              c.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+            if (key === "all") {
+              document.body.classList.remove("finder-filtering");
+              blocks.forEach(function (b) { b.classList.remove("finder-match"); });
+              return;
+            }
+            document.body.classList.add("finder-filtering");
+            var firstMatch = null;
+            blocks.forEach(function (b) {
+              var match = b.getAttribute("data-finder-cat") === key;
+              b.classList.toggle("finder-match", match);
+              if (match && !firstMatch) { firstMatch = b; }
+            });
+            if (firstMatch) {
+              firstMatch.scrollIntoView({ behavior: scrollBehavior, block: "start" });
+            }
+          });
         });
       })();
     </script>
